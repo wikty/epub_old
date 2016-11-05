@@ -3,7 +3,7 @@ from ebook import items
 from ebook.ItemLoaders.ctext_article_loader import CTextArticleLoader
 
 class CTextSpider(scrapy.Spider):
-	name = 'ctext-spider1'
+	name = 'ctext-spider'
 	start_urls = ['http://ctext.org/zh']
 
 	def parse(self, response):
@@ -15,6 +15,7 @@ class CTextSpider(scrapy.Spider):
 
 		for catlink in catlist:
 			link = catlink.css('::attr(href)').extract_first()
+			# en_catname = link.split('/')[-2]
 			# catname = catlink.css('::text').extract_first()
 
 			if link is not None:
@@ -27,15 +28,11 @@ class CTextSpider(scrapy.Spider):
 		if en_category != 'pre-qin-and-han':
 			return
 
-		# menu = response.xpath('//div[@id="menu"]')
-		# xpath = 'div[contains(@class, "menuitem")]/a[contains(@href, "' + en_category + '")]'
-		# catlink = menu.xpath(xpath)
-		# cn_category = catlink.css('::text').extract_first()
-
 		xpath = '//div[@id="menu"]/div[contains(@class, "menuitem")]/a[contains(@href, "%s")]/parent::div/following-sibling::div[1]/preceding-sibling::span[preceding-sibling::div/a[contains(@href, "%s")]]/a'
 		for subcat in response.xpath(xpath % (en_category, en_category)):
 			link = subcat.css('::attr(href)').extract_first()
-			catname = subcat.css('::text').extract_first()
+			# en_sub_catname = link.split('/')[-2]
+			# sub_catname = subcat.css('::text').extract_first()
 			
 			if link is not None:
 				link = response.urljoin(link)
@@ -50,7 +47,8 @@ class CTextSpider(scrapy.Spider):
 		xpath = '//div[@id="menu"]//a[contains(@href, "%s")]/following-sibling::span[1]/a'
 		for book in response.xpath(xpath % en_subcat):
 			link = book.css('::attr(href)').extract_first()
-			bookname = book.css('::text').extract_first()
+			# en_bookname = link.split('/')[-2]
+			# bookname = book.css('::text').extract_first()
 
 			if link is not None:
 				link = response.urljoin(link)
@@ -62,17 +60,26 @@ class CTextSpider(scrapy.Spider):
 		if en_book != 'analects':
 			return
 
+		article_id = 1
 		xpath = '//div[@id="content2"]/a'
 		for article in response.xpath(xpath):
 			link = article.css('::attr(href)').extract_first()
-			artname = article.css('::text').extract_first()
+			# en_artname = link.split('/')[-2]
+			# artname = article.css('::text').extract_first()
 
 			if link is not None:
 				link = response.urljoin(link)
-				yield scrapy.Request(link, callback=self.parse_article)
+				request = scrapy.Request(link, callback=self.parse_article)
+				request.meta['article_id'] = article_id
+				article_id += 1
+				yield request
 
 	def parse_article(self, response):
 		en_title = response.url.split('/')[-2]
+
+		if en_title not in ['xue-er', 'wei-zheng']:
+			return
+
 		xpath = '//div[@id="content"]//span[@itemscope][@itemtype][%d]/a'
 		category = response.xpath(xpath % 1).xpath('span/text()').extract_first()
 		category_url = response.xpath(xpath % 1).xpath('@href').extract_first()
@@ -83,8 +90,9 @@ class CTextSpider(scrapy.Spider):
 		book = response.xpath(xpath % 3).xpath('span/text()').extract_first()
 		book_url = response.xpath(xpath % 3).xpath('@href').extract_first()
 		en_book = book_url.split('/')[-2]
-
+		
 		l = CTextArticleLoader(item=items.CTextArticle(), response=response)
+		l.add_value('article_id', response.meta['article_id'])
 		l.add_value('category', category)
 		l.add_value('en_category', en_category)
 		l.add_value('sub_category', sub_category)
@@ -93,16 +101,61 @@ class CTextSpider(scrapy.Spider):
 		l.add_value('en_book', en_book)
 		l.add_value('en_title', response.url.split('/')[-2])
 		l.add_xpath('title', '//div[@id="content3"]//h2/text()')
-		l.add_xpath('content', '//div[@id="content3"]/table[2]/tr/td[3]/text()')
+
+		content = []
+		for item in response.xpath('//div[@id="content3"]/table[2]/tr/td[3]'):
+			
+			if item.xpath('sup'):
+				pass
+			if item.xpath('p[@class="refs"]'):
+				pass
+		
+		sups = {}
+		i = 0
+		trlist = response.xpath('//div[@id="content3"]/table[2]/tr/td[3]')
+		n = len(trlist)
+		while i<n:
+			item = trlist[i].xpath('td[3]')
+			# /*[not(self::p) and not(self::sup)]
+
+			pn = item.xpath('td[1]/a/text()').extract_first()
+			if pn:
+				item = item.xpath('td[3]')
+				
+				if item.xpath('a'):
+					content.append(''.join([s.strip() for s in item.css('::text') if s.strip() and not s.isdegit()]))
+				else:
+					content.append(''.join([s.strip() for s in item.xpath('text()') if s.strip()]))
+
+				item = trlist[i+1].xpath('td[3]')
+
+
+			else:
+				
+
+			n = 
+			if n:
+				item = item.xpath('td[3]')
+				if item.xpath('a'):
+					content.append(''.join([s.strip() for s in item.css('::text') if s.strip() and not s.isdegit()]))
+				else:
+					content.append(''.join([s.strip() for s in item.xpath('text()') if s.strip()]))
+			
+			if item.xpath('sup'):
+				sups[item.xpath('sup/text()').extract_first()] = {
+					'id': len(content)-1,
+					'content': ''
+				}
+
+			if item.xpath('p[@class="refs"]'):
+				refs = item.xpath('p[@class="refs"]').css('::text').extract()
+				if refs:
+					n = refs[0].split('.')[0]
+					sups[n]['content'] = ''.join(refs)
+					sups[n]['content'] = sups[n]['content'][sups[n]['content'].index(' ')+1:]
+
+		
+		# l.add_xpath('content', '//div[@id="content3"]/table[2]/tr/td[3][@class="ctext"]/text()')
+		# l.add_xpath('mcontent', '//div[@id="content3"]/table[2]/tr/td[3][@class="mctext"]/text()')
 		l.add_value('filename', '-'.join([en_category, en_sub_category, en_title]))
-		# add_* invoke input processor
-		# l.add_xpath('name', '//div[@class="product_name"]')
-		# l.add_xpath('name', '//div[@class="product_title"]')
-		# l.add_xpath('price', '//p[@id="price"]')
-		# l.add_css('stock', 'p#stock]')
-		# l.add_value('last_updated', 'today') # you can also use literal values
-		# nested loader
-		# footer_loader = loader.nested_xpath('//footer')
-		# footer_loader.add_xpath('social', 'a[@class = "social"]/@href')
-		# footer_loader.add_xpath('email', 'a[@class = "email"]/@href')
-		return l.load_item() # invoke output processor and return the populated item
+		return l.load_item()

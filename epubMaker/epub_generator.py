@@ -8,7 +8,7 @@ class EpubGenerator:
         self.bookname = bookname
         self.bookcname = bookcname
         self.bookid = bookid
-        self.booktype = booktype if booktype in ['tw', 'zh', 'en'] else 'tw'
+        self.booktype = booktype if booktype in ['tw', 'zh'] else 'tw'
         self.bookcat = bookcat
         self.author = author
         self.publisher = publisher
@@ -31,6 +31,15 @@ class EpubGenerator:
         self.cssdir = ''
         self.makedirs()
         self.cpyfiles()
+        self.covertitle = '封面'
+        if self.booktype == 'tw':
+            self.contentstitle = '目錄'
+            self.fronttitle = '版權信息'
+            self.navtitle = '目錄'
+        else:
+            self.contentstitle = '目录'
+            self.fronttitle = '版权信息'
+            self.navtitle = '目录'
 
     def makedirs(self):
         bookname = self.bookname
@@ -83,7 +92,6 @@ class EpubGenerator:
         self.generate_package()
     
     def generate_articles(self):
-        count = 0
         jsonfile = os.sep.join([self.rootpath, self.jsonfile])
         # generate xhtml documents
         with open(jsonfile, 'r', encoding='utf-8') as f:
@@ -104,16 +112,18 @@ t', 'title', 'en_category', 'sub_category', 'category']
                         if key == 'title':
                             article[key] = article[key].strip('》《')
                 article['contentspage'] = self.contentspage
-                article['contents_id'] = count
-                count += 1
                 self.articles.append(article)
 
-                article_file_name = os.sep.join([
+        self.articles.sort(key=lambda item: item['en_title'].replace('-', ''))
+        for i in range(len(self.articles)):
+            self.articles[i]['contents_id'] = i+1
+            article = self.articles[i]
+            article_file_name = os.sep.join([
                     self.xhtmldir,
                     '.'.join([article['filename'], 'xhtml'])
                 ])
 
-                PageGenerator.generate_article(article_file_name, article)
+            PageGenerator.generate_article(article_file_name, article)
     
     def generate_coverpage(self):
         cover_file_name = os.sep.join([self.xhtmldir, self.coverpage])
@@ -148,39 +158,28 @@ t', 'title', 'en_category', 'sub_category', 'category']
             menu.append(item)
 
         data = {
-            'content': '\n'.join(menu)
+            'content': '\n'.join(menu),
+            'title': self.contentstitle
         }
-        if self.booktype == 'tw':
-            data['title'] = '目錄'
-        else:
-            data['title'] = '目录'
         PageGenerator.generate_contentspage(contents_file_name, data)
 
     def generate_navpage(self):
         menu = []
         for i in range(len(self.articles)):
             article = self.articles[i]
-            li = '<li><a href="{filename}.xhtml">{title}</a></li>'.format(filename=article['filename'], title=article['title'])
+            li = '    <li><a href="{filename}.xhtml">{title}</a></li>'.format(filename=article['filename'], title=article['title'])
             menu.append(li)
         nav_file_name = os.sep.join([self.xhtmldir, self.navpage])
         data = {
             'content': '\n'.join(menu),
             'coverpage': self.coverpage,
             'frontpage': self.frontpage,
-            'contentspage': self.contentspage
+            'contentspage': self.contentspage,
+            'title': self.navtitle,
+            'covertitle': self.covertitle,
+            'fronttitle': self.fronttitle,
+            'contentstitle': self.contentstitle
         }
-
-        if self.booktype == 'tw':
-            data['title'] = '目錄'
-            data['cover'] = '封面'
-            data['copyright'] = '版權信息'
-            data['contents'] = '目錄'
-        else:
-            data['title'] = '目录'
-            data['cover'] = '封面'
-            data['copyright'] = '版权信息'
-            data['contents'] = '目录'
-
         PageGenerator.generate_navpage(nav_file_name, data)
 
     def generate_package(self):
@@ -201,3 +200,13 @@ t', 'title', 'en_category', 'sub_category', 'category']
         }
 
         PackageGenerator.generate_opf(**data)
+        data = {
+            'filename': os.sep.join([self.epubdir, self.ncxfile]),
+            'bookid': self.bookid,
+            'bookcname': self.bookcname,
+            'articles': self.articles,
+            'covertitle': self.covertitle,
+            'contentstitle': self.contentstitle,
+            'fronttitle': self.fronttitle
+        }
+        PackageGenerator.generate_ncx(**data)

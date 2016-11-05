@@ -30,6 +30,7 @@ class PackageGenerator():
             items.append(PackageGenerator.OPF_XHTML_ITEM.format(id=frontpage))
             items.append(PackageGenerator.OPF_XHTML_ITEM.format(id=contentspage))
             itemrefs.append(PackageGenerator.OPF_ITEMREF.format(id='nav', linear='no'))
+            itemrefs.append(PackageGenerator.OPF_ITEMREF.format(id=coverpage, linear='yes'))
             itemrefs.append(PackageGenerator.OPF_ITEMREF.format(id=frontpage, linear='yes'))
             itemrefs.append(PackageGenerator.OPF_ITEMREF.format(id=contentspage, linear='yes'))
             for article in articles:
@@ -42,6 +43,17 @@ class PackageGenerator():
             f.write(PackageGenerator.OPF_SPINE.format(itemrefs=''.join(itemrefs)))
             # package footer
             f.write(PackageGenerator.OPF_FOOTER)
+    @staticmethod
+    def generate_ncx(filename, bookcname, bookid, articles, covertitle, fronttitle, contentstitle):
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(PackageGenerator.NCX_HEADER.format(bookid=bookid, title=bookcname))
+
+            l = []
+            for article in articles:
+                l.append(PackageGenerator.NCX_NAVPOINT.format(id=article['contents_id'], filename=article['filename'], title=article['title']))
+
+            f.write('\n'.join(l))
+            f.write(PackageGenerator.NCX_FOOTER)
 
     OPF_HEADER = \
 """<?xml version="1.0" encoding="utf-8" standalone="yes"?>
@@ -61,8 +73,9 @@ class PackageGenerator():
 """
 
     OPF_FOOTER = \
-"""   <guide>
-      <reference href="xhtml/coverpage.html" type="cover" />
+"""
+   <guide>
+      <reference href="xhtml/coverpage.xhtml" type="cover" />
    </guide>
 </package>"""
 
@@ -76,7 +89,7 @@ class PackageGenerator():
 """
 
     OPF_CSS_ITEM = \
-"""      <item href="xhtml/{filename}" id="{id}" media-type="text/css" />
+"""      <item href="css/{filename}" id="{id}" media-type="text/css" />
 """
 
     OPF_JS_ITEM = \
@@ -100,9 +113,36 @@ class PackageGenerator():
 """
 
     OPF_SPINE = \
-"""   <spine>
+"""   <spine toc="ncx">
 {itemrefs}   </spine>"""
 
     OPF_ITEMREF = \
 """      <itemref idref="{id}" linear="{linear}"/>
 """
+
+    NCX_HEADER = \
+"""<?xml version="1.0" encoding="UTF-8" standalone="no" ?><ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta content="{bookid}" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>{title}</text>
+  </docTitle>
+  <navMap>"""
+
+    NCX_FOOTER = \
+"""
+  </navMap>
+</ncx>"""
+
+    NCX_NAVPOINT = \
+"""
+    <navPoint id="navPoint-{id}" playOrder="{id}">
+      <navLabel>
+        <text>{title}</text>
+      </navLabel>
+      <content src="xhtml/{filename}.xhtml" />
+    </navPoint>"""

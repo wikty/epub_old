@@ -18,6 +18,7 @@ class CTextArticle(scrapy.Item):
 	# title = scrapy.Field(serializer=title_serializer)
 	# content = scrapy.Field(serializer=content_serializer)
 
+	article_id = scrapy.Field()
 	category = scrapy.Field()
 	en_category = scrapy.Field()
 	sub_category = scrapy.Field()
@@ -27,4 +28,5 @@ class CTextArticle(scrapy.Item):
 	en_title = scrapy.Field()
 	title = scrapy.Field()
 	content = scrapy.Field()
+	mcontent = scrapy.Field()
 	filename = scrapy.Field()

@@ -108,10 +108,10 @@ class PageGenerator():
 <nav epub:type="toc" id="toc">
   <h2>{title}</h2>
   <ol epub:type="list">
-    <li><a href="{coverpage}">{cover}</a></li>
-    <li><a href="{frontpage}">{copyright}</a></li>
-    <li><a href="{contents}">{contents}</a></li>
-    {content}
+    <li><a href="{coverpage}">{covertitle}</a></li>
+    <li><a href="{frontpage}">{fronttitle}</a></li>
+    <li><a href="{contentspage}">{contentstitle}</a></li>
+{content}
   </ol>
 </nav>
 </body>

@@ -3,7 +3,7 @@ from ebook import items
 from ebook.ItemLoaders.ctext_article_loader import CTextArticleLoader
 
 class CTextSpider(scrapy.Spider):
-	name = 'ctext-spider'
+	name = 'ctext-spider-drop'
 	start_urls = ['http://ctext.org/analects/zh']
 
 	def parse(self, response):

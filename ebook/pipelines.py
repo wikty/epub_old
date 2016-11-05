@@ -30,6 +30,7 @@ class StoreArticlesInBook(object):
     def process_item(self, item, spider):
         en_book = dict(item).get('en_book', None)
         if en_book is not None:
+            en_book = ''.join(en_book)
             line = json.dumps(dict(item), ensure_ascii=False) + "\n"
             if en_book not in self.fd:
                 self.fd[en_book] = codecs.open('.'.join([en_book, 'jl']), 'w', encoding='utf-8')

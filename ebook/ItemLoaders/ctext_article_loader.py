@@ -1,11 +1,15 @@
+# -*- coding: utf-8 -*-
+
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import TakeFirst, MapCompose, Join, Identity
+from w3lib.html import remove_tags, remove_tags_with_content
 
-def title_processor_in(data):
-	return ''.join([item.strip() for item in data])
+def drop_empty_processor_in(data):
+	data = data.strip()
+	return data if data else None
 
-def content_processor_in(data):
-	return data.strip() if data.strip() else None
+def remove_title_tag_processor_in(data):
+	return data.strip('》《')
 
 def common_processor_in(data):
 	return data
@@ -17,23 +21,24 @@ class CTextArticleLoader(ItemLoader):
 	
 	#default_output_processor = TakeFirst()
 
-	category = MapCompose(common_processor_in)
-	en_category = MapCompose(common_processor_in)
-	sub_category = MapCompose(common_processor_in)
-	en_sub_category = MapCompose(common_processor_in)
-	book = MapCompose(common_processor_in)
-	en_book = MapCompose(common_processor_in)
+	article_id_in = MapCompose(common_processor_in)
+	article_id_out = TakeFirst()
+	category_in = MapCompose(common_processor_in)
+	category_out = Join()
+	en_category_in = MapCompose(common_processor_in)
+	en_category_out = Join()
+	sub_category_in = MapCompose(common_processor_in)
+	sub_category_out = Join()
+	en_sub_category_in = MapCompose(common_processor_in)
+	en_sub_category_out = Join()
+	book_in = MapCompose(common_processor_in)
+	book_out = Join()
+	en_book_in = MapCompose(common_processor_in)
+	en_book_out = Join()
 	en_title_in = MapCompose(common_processor_in)
-	title_in = MapCompose(title_processor_in)
-	content_in = MapCompose(content_processor_in)
-
+	en_title_out = Join()
+	title_in = MapCompose(drop_empty_processor_in, remove_title_tag_processor_in)
+	title_out = Join()
+	content_in = MapCompose(drop_empty_processor_in)
 	#content_out = Join(separator='\n')
-	
-	# input processors are declared using the _in suffix
-	
-	# name_in = MapCompose(unicode.title)
-	
-	# output processors are declared using the _out suffix
-	
-	# name_out = Join()
-	# price_in = MapCompose(unicode.strip)
+	mcontent_in = MapCompose(drop_empty_processor_in)

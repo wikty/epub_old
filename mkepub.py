@@ -21,11 +21,16 @@ config['bookcname'] = '論語'
 config['bookcat'] = '先秦兩漢儒家经典'
 config['bookid'] = '00000002-20161001'
 config['author'] = '〔春秋-戰國〕孔子及其弟子'
-config['publisher'] = '©艺雅出版社'
+config['publisher'] = '©藝雅出版社'
 config['coverfile'] = 'cover.jpg'
 config['rootpath'] = os.getcwd()
 config['jsonfile'] = ebook_name+'.jl'
 EpubGenerator(**config).run()
 os.chdir(os.sep.join(['epub', ebook_name]))
-os.system("zip -rq " + '.'.join([ebook_name, 'epub']) + " *")
+# os.system("zip -rq " + '.'.join([ebook_name, 'epub']) + " *")
+# mimetype must be plain text(no compressed), 
+# must be first file in archive, so other inable-unzip 
+# application can read epub's first 30 bytes
+os.system("zip -0Xq " + '.'.join([ebook_name, 'epub']) + " mimetype")
+os.system("zip -Xr9Dq " + '.'.join([ebook_name, 'epub']) + " *")
 os.chdir('..')
