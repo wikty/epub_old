@@ -20,27 +20,38 @@ class JsonWithEncodingPipeline(object):
         return item
 
     def spider_closed(self, spider):
-        self.file.close()
+        if self.file:
+            self.file.close()
 
-class StoreArticlesInBook(object):
+class StoreArticlesInBookPipeline(object):
 
     def __init__(self):
         self.fd = {}
+        self.fd['booklist'] = codecs.open('booklist.jl', 'w+', encoding='utf-8')
 
     def process_item(self, item, spider):
         en_book = dict(item).get('en_book', None)
         if en_book is not None:
-            en_book = ''.join(en_book)
             line = json.dumps(dict(item), ensure_ascii=False) + "\n"
             if en_book not in self.fd:
                 self.fd[en_book] = codecs.open('.'.join([en_book, 'jl']), 'w', encoding='utf-8')
+                self.fd['booklist'].write(json.dumps({
+                    'booktype': dict(item).get('booktype', ''),
+                    'bookname': dict(item).get('en_book', ''),
+                    'bookcname': dict(item).get('book', ''),
+                    'bookcat': dict(item).get('category', ''),
+                    'bookid': '',
+                    'author': ''
+                }, ensure_ascii=False) + "\n")
+
             self.fd[en_book].write(line)
 
         return item
 
     def spider_closed(self, spider):
         for fname in self.fd:
-            self.fd[fname].close()
+            if self.fd[fname]:
+                self.fd[fname].close()
 
 class EbookPipeline(object):
     def process_item(self, item, spider):

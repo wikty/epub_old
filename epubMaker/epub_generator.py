@@ -103,25 +103,31 @@ class EpubGenerator:
 t', 'title', 'en_category', 'sub_category', 'category']
                 '''
                 if not article['filename'] or not article['content']:
-                    continue
-                for key in article:
-                    if key == 'content':
-                        article[key] = '\n'.join(['<p>' + l + '</p>'  for l in article[key]])
-                    else:
-                        article[key] = ''.join(article[key])
-                        if key == 'title':
-                            article[key] = article[key].strip('》《')
+                    raise Exception('filename and content must be filled')
+                # for key in article:
+                #     if key == 'content':
+                #         article[key] = '\n'.join(['<p>' + l + '</p>'  for l in article[key]])
+                    # elif key == 'comment':
+                    #     article[key] = '\n'.join(['<p>' + l + '</p>' for l in article[key]])
+                article['content'] = '\n'.join(['<p>' + l + '</p>'  for l in article['content']])
+                if 'comment' not in article:
+                    article['comment'] = []
+                else:
+                    article['content'] = article['content'] + '\n<hr/>\n' + '\n'.join(['<p>' + l + '</p>' for l in article['comment']])
                 article['contentspage'] = self.contentspage
                 self.articles.append(article)
 
-        self.articles.sort(key=lambda item: item['en_title'].replace('-', ''))
-        for i in range(len(self.articles)):
-            self.articles[i]['contents_id'] = i+1
-            article = self.articles[i]
+        self.articles.sort(key = lambda item: item['article_id'])
+        #self.articles.sort(key=lambda item: item['en_title'].replace('-', ''))
+        count = 1
+        for article in self.articles:
+            if article['article_id'] != count:
+                raise Exception('article lost')
+            count += 1
             article_file_name = os.sep.join([
-                    self.xhtmldir,
-                    '.'.join([article['filename'], 'xhtml'])
-                ])
+                self.xhtmldir,
+                '.'.join([article['filename'], 'xhtml'])
+            ])
 
             PageGenerator.generate_article(article_file_name, article)
     
@@ -154,7 +160,7 @@ t', 'title', 'en_category', 'sub_category', 'category']
         menu = []
         for i in range(len(self.articles)):
             article = self.articles[i]
-            item = '<p class="sgc-toc-level-1"><a href="{filename}.xhtml" id="{id}">{title}</a></p>'.format(filename=article['filename'], id=article['contents_id'], title=article['title']) 
+            item = '<p class="sgc-toc-level-1"><a href="{filename}.xhtml" id="{id}">{title}</a></p>'.format(filename=article['filename'], id=article['article_id'], title=article['title']) 
             menu.append(item)
 
         data = {

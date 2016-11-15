@@ -35,52 +35,6 @@ class PageGenerator():
     def generate_contentspage(filename, data):
         PageGenerator.generate(filename, PageGenerator.CONTENTS_TEMPLATE, data)
 
-    # @staticmethod
-    # def generate_infopage(filename, **data):
-    #     PageGenerator.generate(filename, PageGenerator.INFOPAGE_TEMPLATE, data)
-
-    INDEX_TEMPLATE = \
-"""<?xml version="1.0" encoding="utf-8"?>
-<html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="provider" content="{provider}"/>
-        <meta name="builder" content="{builder}"/>
-        <meta name="right" content="{right}"/>
-        {css}
-        <title>{title}</title>
-    </head>
-    <body>
-        <div>
-          <h1>{title}</h1>
-        </div>
-        <hr />
-        <br />
-        <ol>
-          {content}
-        </ol>
-    </body>
-</html>"""
-
-    INFOPAGE_TEMPLATE = \
-"""<?xml version="1.0" encoding="utf-8"?>
-<html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="provider" content="{provider}"/>
-        <meta name="builder" content="{builder}"/>
-        <meta name="right" content="{right}"/>
-        {css}
-        <title>{title}</title>
-    </head>
-    <body>
-        <h1>{title}</h1>
-        <div>
-        {right}
-        </div>
-    </body>
-</html>"""
-
     ARTICLE_TEMPLATE = \
 """<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE html>
@@ -91,7 +45,7 @@ class PageGenerator():
         <title>{title}</title>
     </head>
     <body>
-        <h2><a href="{contentspage}#{contents_id}">{title}</a></h2>
+        <h2><a href="{contentspage}#{article_id}">{title}</a></h2>
         {content}
     </body>
 </html>"""

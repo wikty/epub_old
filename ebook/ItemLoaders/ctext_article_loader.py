@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from scrapy.loader import ItemLoader
-from scrapy.loader.processors import TakeFirst, MapCompose, Join, Identity
+from scrapy.loader.processors import TakeFirst, MapCompose, Join, Identity, Compose
 from w3lib.html import remove_tags, remove_tags_with_content
 
 def drop_empty_processor_in(data):
@@ -40,5 +40,8 @@ class CTextArticleLoader(ItemLoader):
 	title_in = MapCompose(drop_empty_processor_in, remove_title_tag_processor_in)
 	title_out = Join()
 	content_in = MapCompose(drop_empty_processor_in)
+	comment_in = MapCompose(drop_empty_processor_in)
+	filename_out = Join()
 	#content_out = Join(separator='\n')
-	mcontent_in = MapCompose(drop_empty_processor_in)
+	booktype_in = MapCompose(common_processor_in)
+	booktype_out = Join()

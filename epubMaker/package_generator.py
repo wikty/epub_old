@@ -50,7 +50,7 @@ class PackageGenerator():
 
             l = []
             for article in articles:
-                l.append(PackageGenerator.NCX_NAVPOINT.format(id=article['contents_id'], filename=article['filename'], title=article['title']))
+                l.append(PackageGenerator.NCX_NAVPOINT.format(id=article['article_id'], filename=article['filename'], title=article['title']))
 
             f.write('\n'.join(l))
             f.write(PackageGenerator.NCX_FOOTER)

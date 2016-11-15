@@ -3,34 +3,31 @@
 import os, getopt, sys, json
 from epubMaker.epub_generator import EpubGenerator
 
-#ebook_name = 'eBookTest'
-
-# try:
-#     opts, args = getopt.getopt(sys.argv[1:], "n:")
-#     if opts and opts[0][0] == '-n':
-#     	ebook_name = opts[0][1]
-
-# except getopt.GetoptError:
-# 	raise
-
-ebook_name = 'analects'
-config = {}
-config['booktype'] = 'tw'
-config['bookname'] = ebook_name
-config['bookcname'] = '論語'
-config['bookcat'] = '先秦兩漢儒家经典'
-config['bookid'] = '00000002-20161001'
-config['author'] = '〔春秋-戰國〕孔子及其弟子'
-config['publisher'] = '©藝雅出版社'
-config['coverfile'] = 'cover.jpg'
-config['rootpath'] = os.getcwd()
-config['jsonfile'] = ebook_name+'.jl'
-EpubGenerator(**config).run()
-os.chdir(os.sep.join(['epub', ebook_name]))
-# os.system("zip -rq " + '.'.join([ebook_name, 'epub']) + " *")
-# mimetype must be plain text(no compressed), 
-# must be first file in archive, so other inable-unzip 
-# application can read epub's first 30 bytes
-os.system("zip -0Xq " + '.'.join([ebook_name, 'epub']) + " mimetype")
-os.system("zip -Xr9Dq " + '.'.join([ebook_name, 'epub']) + " *")
-os.chdir('..')
+with open('booklist.jl', 'r', encoding='utf-8') as f:
+	for line in f:
+		item = json.loads(line)
+		ebook_name = item['bookname']
+		if os.path.exists(os.sep.join(['epub', ebook_name])):
+			continue
+		config = {}
+		config['booktype'] = item['booktype']
+		config['bookname'] = ebook_name
+		config['bookcname'] = item['bookcname']
+		config['bookcat'] = item['bookcat']
+		config['bookid'] = '00000002-20161001'
+		config['author'] = '待填充'
+		config['publisher'] = '©藝雅出版社'
+		config['coverfile'] = 'cover.jpg'
+		config['rootpath'] = os.getcwd()
+		print(os.getcwd())
+		config['jsonfile'] = ebook_name+'.jl'
+		EpubGenerator(**config).run()
+		os.chdir(os.sep.join(['epub', ebook_name]))
+		# os.system("zip -rq " + '.'.join([ebook_name, 'epub']) + " *")
+		# mimetype must be plain text(no compressed), 
+		# must be first file in archive, so other inable-unzip 
+		# application can read epub's first 30 bytes
+		os.system("zip -0Xq " + '.'.join([ebook_name, 'epub']) + " mimetype")
+		os.system("zip -Xr9Dq " + '.'.join([ebook_name, 'epub']) + " *")
+		os.chdir('..')
+		os.chdir('..')
