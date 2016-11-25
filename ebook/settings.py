@@ -29,12 +29,12 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 2
 # randomize download delay = 0.5~1.5 * DOWNLOAD_DELAY 
 RANDOMIZE_DOWNLOAD_DELAY = True
 # The download delay setting will honor only one of:
-CONCURRENT_REQUESTS_PER_DOMAIN = 16
-CONCURRENT_REQUESTS_PER_IP = 16
+CONCURRENT_REQUESTS_PER_DOMAIN = 8
+CONCURRENT_REQUESTS_PER_IP = 8
 
 # Disable cookies (enabled by default)
 # some sites detect spider by cookies
@@ -63,7 +63,7 @@ RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'ebook.middlewares.UserAgentMiddleware.RandomUserAgentMiddleware': 400,
     # 'scrapy.downloadermiddlewares.retry.RetryMiddleware': 90,
     # 'ebook.middlewares.ProxyMiddleware.RandomProxyMiddleware': 100,
@@ -79,7 +79,8 @@ PROXY_LIST = os.path.dirname(__file__) + '/data/proxies.txt'
 PROXY_MODE = 0
 
 # If proxy mode is 2 uncomment this sentence :
-#CUSTOM_PROXY = "http://host1:port"
+# Privoxy listening on 8118 port
+CUSTOM_PROXY = "http://127.0.0.1:8118"
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -116,3 +117,6 @@ USER_AGENT_LIST = os.path.dirname(__file__) + '/data/agents.txt'
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+LOG_FILE = 'logs'
+LOG_LEVEL = 'ERROR'

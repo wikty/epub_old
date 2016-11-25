@@ -3,10 +3,10 @@
    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
       <dc:identifier id="book-id">00000002-20161001</dc:identifier>
       <dc:title>論語</dc:title>
-      <dc:creator>〔春秋-戰國〕孔子及其弟子</dc:creator>
+      <dc:creator>待填充</dc:creator>
       <dc:publisher>©藝雅出版社</dc:publisher>
       <dc:language>zh-cn</dc:language>
-      <meta property="dcterms:modified">2016-11-06T18:39:24Z</meta>
+      <meta property="dcterms:modified">2016-11-16T22:34:06Z</meta>
       <meta property="rendition:layout">reflowable</meta>
       <meta property="rendition:orientation">auto</meta>
       <meta property="rendition:spread">auto</meta>

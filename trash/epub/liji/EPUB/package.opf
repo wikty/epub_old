@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" prefix="rendition: http://www.idpf.org/vocab/rendition/#" unique-identifier="book-id" version="3.0" xml:lang="en">
+   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:identifier id="book-id">00000002-20161001</dc:identifier>
+      <dc:title>禮記</dc:title>
+      <dc:creator>待填充</dc:creator>
+      <dc:publisher>©藝雅出版社</dc:publisher>
+      <dc:language>zh-cn</dc:language>
+      <meta property="dcterms:modified">2016-11-14T09:46:41Z</meta>
+      <meta property="rendition:layout">reflowable</meta>
+      <meta property="rendition:orientation">auto</meta>
+      <meta property="rendition:spread">auto</meta>
+      <meta content="0.7.4" name="Sigil version" />
+   </metadata>
+   <manifest>
+      <item href="xhtml/nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+      <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+      <item href="img/cover.jpg" id="cover.jpg" media-type="image/jpeg" />
+      <item href="css/main.css" id="main.css" media-type="text/css" />
+      <item href="xhtml/coverpage.xhtml" id="coverpage.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+      <item href="xhtml/frontpage.xhtml" id="frontpage.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/contents.xhtml" id="contents.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-qu-li-i.xhtml" id="pre-qin-and-han-confucianism-qu-li-i.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-qu-li-ii.xhtml" id="pre-qin-and-han-confucianism-qu-li-ii.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-tan-gong-i.xhtml" id="pre-qin-and-han-confucianism-tan-gong-i.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-tan-gong-ii.xhtml" id="pre-qin-and-han-confucianism-tan-gong-ii.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-wang-zhi.xhtml" id="pre-qin-and-han-confucianism-wang-zhi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-yue-ling.xhtml" id="pre-qin-and-han-confucianism-yue-ling.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-zengzi-wen.xhtml" id="pre-qin-and-han-confucianism-zengzi-wen.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-wen-wang-shi-zi.xhtml" id="pre-qin-and-han-confucianism-wen-wang-shi-zi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-li-yun.xhtml" id="pre-qin-and-han-confucianism-li-yun.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-li-qi.xhtml" id="pre-qin-and-han-confucianism-li-qi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-jiao-te-sheng.xhtml" id="pre-qin-and-han-confucianism-jiao-te-sheng.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-nei-ze.xhtml" id="pre-qin-and-han-confucianism-nei-ze.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-yu-zao.xhtml" id="pre-qin-and-han-confucianism-yu-zao.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-ming-tang-wei.xhtml" id="pre-qin-and-han-confucianism-ming-tang-wei.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-sang-fu-xiao-ji.xhtml" id="pre-qin-and-han-confucianism-sang-fu-xiao-ji.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-da-zhuan.xhtml" id="pre-qin-and-han-confucianism-da-zhuan.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-shao-yi.xhtml" id="pre-qin-and-han-confucianism-shao-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-xue-ji.xhtml" id="pre-qin-and-han-confucianism-xue-ji.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-yue-ji.xhtml" id="pre-qin-and-han-confucianism-yue-ji.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-za-ji-i.xhtml" id="pre-qin-and-han-confucianism-za-ji-i.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-za-ji-ii.xhtml" id="pre-qin-and-han-confucianism-za-ji-ii.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-sang-da-ji.xhtml" id="pre-qin-and-han-confucianism-sang-da-ji.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-ji-fa.xhtml" id="pre-qin-and-han-confucianism-ji-fa.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-ji-yi.xhtml" id="pre-qin-and-han-confucianism-ji-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-ji-tong.xhtml" id="pre-qin-and-han-confucianism-ji-tong.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-jing-jie.xhtml" id="pre-qin-and-han-confucianism-jing-jie.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-ai-gong-wen.xhtml" id="pre-qin-and-han-confucianism-ai-gong-wen.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-zhongni-yan-ju.xhtml" id="pre-qin-and-han-confucianism-zhongni-yan-ju.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-kongzi-xian-ju.xhtml" id="pre-qin-and-han-confucianism-kongzi-xian-ju.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-fang-ji.xhtml" id="pre-qin-and-han-confucianism-fang-ji.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-zhong-yong.xhtml" id="pre-qin-and-han-confucianism-zhong-yong.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-biao-ji.xhtml" id="pre-qin-and-han-confucianism-biao-ji.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-zi-yi.xhtml" id="pre-qin-and-han-confucianism-zi-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-ben-sang.xhtml" id="pre-qin-and-han-confucianism-ben-sang.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-wen-sang.xhtml" id="pre-qin-and-han-confucianism-wen-sang.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-fu-wen.xhtml" id="pre-qin-and-han-confucianism-fu-wen.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-jian-zhuan.xhtml" id="pre-qin-and-han-confucianism-jian-zhuan.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-san-nian-wen.xhtml" id="pre-qin-and-han-confucianism-san-nian-wen.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-shen-yi.xhtml" id="pre-qin-and-han-confucianism-shen-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-tou-hu.xhtml" id="pre-qin-and-han-confucianism-tou-hu.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-ru-xing.xhtml" id="pre-qin-and-han-confucianism-ru-xing.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-da-xue.xhtml" id="pre-qin-and-han-confucianism-da-xue.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-guan-yi.xhtml" id="pre-qin-and-han-confucianism-guan-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-hun-yi.xhtml" id="pre-qin-and-han-confucianism-hun-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-xiang-yin-jiu-yi.xhtml" id="pre-qin-and-han-confucianism-xiang-yin-jiu-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-she-yi.xhtml" id="pre-qin-and-han-confucianism-she-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-yan-yi.xhtml" id="pre-qin-and-han-confucianism-yan-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-pin-yi.xhtml" id="pre-qin-and-han-confucianism-pin-yi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-sang-fu-si-zhi.xhtml" id="pre-qin-and-han-confucianism-sang-fu-si-zhi.xhtml" media-type="application/xhtml+xml" />
+   </manifest>
+   <spine toc="ncx">
+      <itemref idref="nav" linear="no"/>
+      <itemref idref="coverpage.xhtml" linear="yes"/>
+      <itemref idref="frontpage.xhtml" linear="yes"/>
+      <itemref idref="contents.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-qu-li-i.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-qu-li-ii.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-tan-gong-i.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-tan-gong-ii.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-wang-zhi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-yue-ling.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-zengzi-wen.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-wen-wang-shi-zi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-li-yun.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-li-qi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-jiao-te-sheng.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-nei-ze.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-yu-zao.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-ming-tang-wei.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-sang-fu-xiao-ji.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-da-zhuan.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-shao-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-xue-ji.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-yue-ji.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-za-ji-i.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-za-ji-ii.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-sang-da-ji.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-ji-fa.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-ji-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-ji-tong.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-jing-jie.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-ai-gong-wen.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-zhongni-yan-ju.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-kongzi-xian-ju.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-fang-ji.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-zhong-yong.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-biao-ji.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-zi-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-ben-sang.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-wen-sang.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-fu-wen.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-jian-zhuan.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-san-nian-wen.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-shen-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-tou-hu.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-ru-xing.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-da-xue.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-guan-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-hun-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-xiang-yin-jiu-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-she-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-yan-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-pin-yi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-sang-fu-si-zhi.xhtml" linear="yes"/>
+   </spine>
+   <guide>
+      <reference href="xhtml/coverpage.xhtml" type="cover" />
+   </guide>
+</package>

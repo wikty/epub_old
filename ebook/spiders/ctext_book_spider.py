@@ -6,7 +6,7 @@ from ebook.ItemLoaders.ctext_article_loader import CTextArticleLoader
 
 class CTextBookSpider(scrapy.Spider):
 	name = 'ctext-book-spider'
-	start_urls = ['http://ctext.org/chun-qiu-fan-lu/zh']
+	start_urls = ['http://ctext.org/gui-gu-zi/zh']
 
 	def parse(self, response):
 		en_book = response.url.split('/')[-2]
@@ -54,25 +54,32 @@ class CTextBookSpider(scrapy.Spider):
 
 		comment = []
 		content = []
+		sup_count = 0
+		cmt_count = 0
 		for item in response.xpath('//div[@id="content3"]/table[2]/tr/td[3]'):
 			#nodes = item.xpath('child::node()[not(@class="refs")][not(self::sup)]').extract()
 			nodes = item.xpath('child::node()[not(@class="refs")]').extract()
+			
 			ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
-			ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
-			# if int(item.xpath('contains(@class, "mctext")').extract_first()):
-			# 	content[len(content)-1] = '<br/>'.join([content[len(content)-1], ln])
-			# else:
-			# 	content.append(ln)
+			if re.search(r'<sup\s+[\w"=\']+>\s*(\d+)\s*</sup>', ln):
+				sup_count += 1
+				# ln = re.sub(r'<sup\s+[\w"=\']+>\s*(\d+)\s*</sup>', r'<sup><a class="footnote-link" href="#comment\1" id="reference\1">&#91;\1&#93;</a></sup>', ln)
+				ln = re.sub(r'<sup\s+[\w"=\']+>\s*(\d+)\s*</sup>', '<sup><a class="footnote-link" href="#comment{id}" id="reference{id}">&#91;{id}&#93;</a></sup>'.format(id=sup_count), ln)
+			
 			content.append(ln)
 			if int(item.xpath('contains(@class, "mctext")').extract_first()):
 				content.append('<br/>')
+
 			for cmt in item.xpath('*[contains(@class, "refs")]'):
 				cmt = ''.join([cmti.strip() for cmti in cmt.css('::text').extract() if cmti.strip()])
-				mch = re.match('(\d+)\.\s+', cmt)
+				mch = re.match('(\d+)\.\s*', cmt)
 				if mch:
-					cmtid = mch.group(1)
-					cmt = '<a id="comment{id}" href="#reference{id}">{id}.</a> '.format(id=cmtid) + cmt[mch.regs[0][1]:]
+					cmt_count += 1
+					#cmtid = mch.group(1)
+					cmtid = cmt_count
+					cmt = '<a class="footnote-link" id="comment{id}" href="#reference{id}">&#91;{id}&#93;.</a> '.format(id=cmtid) + cmt[mch.regs[0][1]:]
 					comment.append(cmt)
+		
 		l.add_value('content', content)
 		l.add_value('comment', comment)
 		l.add_value('filename', '-'.join([en_category, en_sub_category, en_title]))

@@ -1,0 +1,224 @@
+2016-11-25 16:56:55 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/xue-er/zh?1> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in parse_article
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in <listcomp>
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+NameError: name 'remove_tags' is not defined
+2016-11-25 16:56:58 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/wei-zheng/zh?2> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in parse_article
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in <listcomp>
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+NameError: name 'remove_tags' is not defined
+2016-11-25 16:57:00 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/ba-yi/zh?3> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in parse_article
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in <listcomp>
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+NameError: name 'remove_tags' is not defined
+2016-11-25 16:57:03 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/li-ren/zh?4> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in parse_article
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in <listcomp>
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+NameError: name 'remove_tags' is not defined
+2016-11-25 16:57:06 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/gong-ye-chang/zh?5> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in parse_article
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 120, in <listcomp>
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+NameError: name 'remove_tags' is not defined
+2016-11-25 16:57:07 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/yong-ye/zh?6
+2016-11-25 16:57:07 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/yong-ye/zh?6
+2016-11-25 16:57:07 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/yong-ye/zh?6
+2016-11-25 16:57:10 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/shu-er/zh?7
+2016-11-25 16:57:10 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/shu-er/zh?7
+2016-11-25 16:57:10 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/shu-er/zh?7
+2016-11-25 16:57:12 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/tai-bo/zh?8
+2016-11-25 16:57:12 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/tai-bo/zh?8
+2016-11-25 16:57:12 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/tai-bo/zh?8
+2016-11-25 16:57:14 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/zi-han/zh?9
+2016-11-25 16:57:14 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/zi-han/zh?9
+2016-11-25 16:57:14 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/zi-han/zh?9
+2016-11-25 16:57:17 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/xiang-dang/zh?10
+2016-11-25 16:57:17 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/xiang-dang/zh?10
+2016-11-25 16:57:17 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/xiang-dang/zh?10
+2016-11-25 16:57:19 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/xian-jin/zh?11
+2016-11-25 16:57:19 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/xian-jin/zh?11
+2016-11-25 16:57:19 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/xian-jin/zh?11
+2016-11-25 16:57:22 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/yan-yuan/zh?12
+2016-11-25 16:57:22 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/yan-yuan/zh?12
+2016-11-25 16:57:22 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/yan-yuan/zh?12
+2016-11-25 16:57:24 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/zi-lu/zh?13
+2016-11-25 16:57:24 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/zi-lu/zh?13
+2016-11-25 16:57:24 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/zi-lu/zh?13
+2016-11-25 16:57:27 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/xian-wen/zh?14
+2016-11-25 16:57:27 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/xian-wen/zh?14
+2016-11-25 16:57:27 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/xian-wen/zh?14
+2016-11-25 16:57:30 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/wei-ling-gong/zh?15
+2016-11-25 16:57:30 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/wei-ling-gong/zh?15
+2016-11-25 16:57:30 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/wei-ling-gong/zh?15
+2016-11-25 16:57:31 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/ji-shi/zh?16
+2016-11-25 16:57:31 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/ji-shi/zh?16
+2016-11-25 16:57:31 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/ji-shi/zh?16
+2016-11-25 16:57:34 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/yang-huo/zh?17
+2016-11-25 16:57:34 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/yang-huo/zh?17
+2016-11-25 16:57:34 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/yang-huo/zh?17
+2016-11-25 16:57:36 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/wei-zi/zh?18
+2016-11-25 16:57:36 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/wei-zi/zh?18
+2016-11-25 16:57:36 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/wei-zi/zh?18
+2016-11-25 16:57:40 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/zi-zhang/zh?19
+2016-11-25 16:57:40 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/zi-zhang/zh?19
+2016-11-25 16:57:40 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/zi-zhang/zh?19
+2016-11-25 16:57:44 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/yao-yue/zh?20
+2016-11-25 16:57:44 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/yao-yue/zh?20
+2016-11-25 16:57:44 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/yao-yue/zh?20
+2016-11-25 16:58:43 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/xue-er/zh?1> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 122, in parse_article
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 122, in <listcomp>
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+NameError: name 'remove_tags' is not defined
+2016-11-25 16:58:45 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/wei-zheng/zh?2> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 122, in parse_article
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 122, in <listcomp>
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+NameError: name 'remove_tags' is not defined
+2016-11-25 16:58:47 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/ba-yi/zh?3> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 122, in parse_article
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 122, in <listcomp>
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+NameError: name 'remove_tags' is not defined
+2016-11-25 16:58:50 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/li-ren/zh?4> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 122, in parse_article
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 122, in <listcomp>
+    ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
+NameError: name 'remove_tags' is not defined
+2016-11-25 17:01:33 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/xue-er/zh?1> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 17:01:35 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/wei-zheng/zh?2> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 17:01:40 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/ba-yi/zh?3> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 17:01:42 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/li-ren/zh?4> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 17:01:44 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/gong-ye-chang/zh?5> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 17:01:46 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/yong-ye/zh?6
+2016-11-25 17:01:46 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/yong-ye/zh?6
+2016-11-25 17:01:46 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/yong-ye/zh?6
+2016-11-25 17:01:49 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/shu-er/zh?7
+2016-11-25 17:01:49 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/shu-er/zh?7
+2016-11-25 17:01:49 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/shu-er/zh?7
+2016-11-25 17:01:53 [ctext-booklist-spider] ERROR: categroy parse fail: http://ctext.org/analects/tai-bo/zh?8
+2016-11-25 17:01:53 [ctext-booklist-spider] ERROR: sub category parse fail: http://ctext.org/analects/tai-bo/zh?8
+2016-11-25 17:01:53 [ctext-booklist-spider] ERROR: book parse fail: http://ctext.org/analects/tai-bo/zh?8
+2016-11-25 19:00:30 [ctext-booklist-spider] ERROR: <twisted.python.failure.Failure twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond..>
+2016-11-25 19:00:30 [ctext-booklist-spider] ERROR: TimeoutError on http://ctext.org/analects/xian-jin/zh?11
+2016-11-25 19:00:37 [ctext-booklist-spider] ERROR: <twisted.python.failure.Failure twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond..>
+2016-11-25 19:00:37 [ctext-booklist-spider] ERROR: TimeoutError on http://ctext.org/analects/yan-yuan/zh?12
+2016-11-25 19:00:42 [ctext-booklist-spider] ERROR: <twisted.python.failure.Failure twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond..>
+2016-11-25 19:00:42 [ctext-booklist-spider] ERROR: TimeoutError on http://ctext.org/analects/xiang-dang/zh?10
+2016-11-25 19:00:48 [ctext-booklist-spider] ERROR: <twisted.python.failure.Failure twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond..>
+2016-11-25 19:00:48 [ctext-booklist-spider] ERROR: TimeoutError on http://ctext.org/analects/zi-zhang/zh?19
+2016-11-25 19:00:52 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/yao-yue/zh?20> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 19:00:54 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/wei-zi/zh?18> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 19:00:58 [ctext-booklist-spider] ERROR: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2016-11-25 19:00:58 [ctext-booklist-spider] ERROR: HttpError on http://ctext.org/analects/zi-han/zh?9
+2016-11-25 19:00:58 [ctext-booklist-spider] ERROR: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2016-11-25 19:00:58 [ctext-booklist-spider] ERROR: HttpError on http://ctext.org/analects/wei-ling-gong/zh?15
+2016-11-25 19:01:02 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/zi-lu/zh?13> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 19:01:03 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/yang-huo/zh?17> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 19:01:05 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/ji-shi/zh?16> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined
+2016-11-25 19:01:05 [scrapy] ERROR: Spider error processing <GET http://ctext.org/analects/xian-wen/zh?14> (referer: None)
+Traceback (most recent call last):
+  File "D:\Program Files\Anaconda3\envs\py3scrapy\lib\site-packages\twisted\internet\defer.py", line 587, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\djj\Desktop\upwork\ebook\ebook\spiders\ctext_booklist_spider.py", line 124, in parse_article
+    ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
+NameError: name 're' is not defined

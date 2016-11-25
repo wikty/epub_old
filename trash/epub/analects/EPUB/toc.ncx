@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta content="00000002-20161001" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>論語</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>學而</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-xue-er.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>為政</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-wei-zheng.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>八佾</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-ba-yi.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>里仁</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-li-ren.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-5" playOrder="5">
+      <navLabel>
+        <text>公冶長</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-gong-ye-chang.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-6" playOrder="6">
+      <navLabel>
+        <text>雍也</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-yong-ye.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-7" playOrder="7">
+      <navLabel>
+        <text>述而</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-shu-er.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-8" playOrder="8">
+      <navLabel>
+        <text>泰伯</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-tai-bo.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-9" playOrder="9">
+      <navLabel>
+        <text>子罕</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-zi-han.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-10" playOrder="10">
+      <navLabel>
+        <text>鄉黨</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-xiang-dang.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-11" playOrder="11">
+      <navLabel>
+        <text>先進</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-xian-jin.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-12" playOrder="12">
+      <navLabel>
+        <text>顏淵</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-yan-yuan.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-13" playOrder="13">
+      <navLabel>
+        <text>子路</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-zi-lu.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-14" playOrder="14">
+      <navLabel>
+        <text>憲問</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-xian-wen.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-15" playOrder="15">
+      <navLabel>
+        <text>衛靈公</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-wei-ling-gong.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-16" playOrder="16">
+      <navLabel>
+        <text>季氏</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-ji-shi.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-17" playOrder="17">
+      <navLabel>
+        <text>陽貨</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-yang-huo.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-18" playOrder="18">
+      <navLabel>
+        <text>微子</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-wei-zi.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-19" playOrder="19">
+      <navLabel>
+        <text>子張</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-zi-zhang.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-20" playOrder="20">
+      <navLabel>
+        <text>堯曰</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-yao-yue.xhtml" />
+    </navPoint>
+  </navMap>
+</ncx>

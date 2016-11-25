@@ -1,7 +1,7 @@
 import scrapy
 
-class ProxyTestSpider(scrapy.Spider):
-	name = 'proxy-test-spider'
+class ProxyCheckSpider(scrapy.Spider):
+	name = 'proxy-check-spider'
 
 	start_urls = ['http://ip.42.pl/raw']
 

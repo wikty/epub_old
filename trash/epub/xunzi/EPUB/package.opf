@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" prefix="rendition: http://www.idpf.org/vocab/rendition/#" unique-identifier="book-id" version="3.0" xml:lang="en">
+   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:identifier id="book-id">00000002-20161001</dc:identifier>
+      <dc:title>荀子</dc:title>
+      <dc:creator>待填充</dc:creator>
+      <dc:publisher>©藝雅出版社</dc:publisher>
+      <dc:language>zh-cn</dc:language>
+      <meta property="dcterms:modified">2016-11-16T22:23:50Z</meta>
+      <meta property="rendition:layout">reflowable</meta>
+      <meta property="rendition:orientation">auto</meta>
+      <meta property="rendition:spread">auto</meta>
+      <meta content="0.7.4" name="Sigil version" />
+   </metadata>
+   <manifest>
+      <item href="xhtml/nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+      <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+      <item href="img/cover.jpg" id="cover.jpg" media-type="image/jpeg" />
+      <item href="css/main.css" id="main.css" media-type="text/css" />
+      <item href="xhtml/coverpage.xhtml" id="coverpage.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+      <item href="xhtml/frontpage.xhtml" id="frontpage.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/contents.xhtml" id="contents.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-zhong-ni.xhtml" id="pre-qin-and-han-confucianism-zhong-ni.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-confucianism-fei-xiang.xhtml" id="pre-qin-and-han-confucianism-fei-xiang.xhtml" media-type="application/xhtml+xml" />
+   </manifest>
+   <spine toc="ncx">
+      <itemref idref="nav" linear="no"/>
+      <itemref idref="coverpage.xhtml" linear="yes"/>
+      <itemref idref="frontpage.xhtml" linear="yes"/>
+      <itemref idref="contents.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-zhong-ni.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-confucianism-fei-xiang.xhtml" linear="yes"/>
+   </spine>
+   <guide>
+      <reference href="xhtml/coverpage.xhtml" type="cover" />
+   </guide>
+</package>

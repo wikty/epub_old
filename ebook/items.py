@@ -29,3 +29,12 @@ class CTextArticleItem(scrapy.Item):
 	comment = scrapy.Field()
 	filename = scrapy.Field()
 	booktype = scrapy.Field()
+
+# class CTextBookInfoItem(scrapy.Item):
+# 	name = scrapy.Field()
+# 	en_name = scrapy.Field()
+# 	category = scrapy.Field()
+# 	en_category = scrapy.Field()
+# 	url = scrapy.Field()
+# 	# [{'name', 'en_name', 'url'}]
+# 	article_list = scrapy.Field()

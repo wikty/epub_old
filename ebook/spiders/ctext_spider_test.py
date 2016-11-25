@@ -4,7 +4,7 @@ from w3lib.html import remove_tags, remove_tags_with_content
 from ebook import items
 from ebook.ItemLoaders.ctext_article_loader import CTextArticleLoader
 
-class CTextSpider(scrapy.Spider):
+class CTextSpiderTest(scrapy.Spider):
 	count = 0
 	name = 'ctext-spider-test'
 	start_urls = ['http://ctext.org/analects/xue-er/zh', 'http://ctext.org/analects/wei-zheng/zh']

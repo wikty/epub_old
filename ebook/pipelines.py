@@ -27,7 +27,7 @@ class StoreArticlesInBookPipeline(object):
 
     def __init__(self):
         self.fd = {}
-        self.fd['booklist'] = codecs.open('booklist.jl', 'w+', encoding='utf-8')
+        self.fd['booklist'] = codecs.open('books.jl', 'a+', encoding='utf-8')
 
     def process_item(self, item, spider):
         en_book = dict(item).get('en_book', None)

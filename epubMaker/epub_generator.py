@@ -113,7 +113,7 @@ t', 'title', 'en_category', 'sub_category', 'category']
                 if 'comment' not in article:
                     article['comment'] = []
                 else:
-                    article['content'] = article['content'] + '\n<hr/>\n' + '\n'.join(['<p>' + l + '</p>' for l in article['comment']])
+                    article['content'] = article['content'] + '\n<hr/>\n<p class="footnote">【注释】</p>\n' + '\n'.join(['<p class="footnote">' + l + '</p>' for l in article['comment']])
                 article['contentspage'] = self.contentspage
                 self.articles.append(article)
 

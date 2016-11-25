@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta content="00000002-20161001" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>孟子</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>梁惠王上</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-liang-hui-wang-i.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>梁惠王下</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-liang-hui-wang-ii.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>公孫丑上</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-gong-sun-chou-i.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>公孫丑下</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-gong-sun-chou-ii.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-5" playOrder="5">
+      <navLabel>
+        <text>滕文公上</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-teng-wen-gong-i.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-6" playOrder="6">
+      <navLabel>
+        <text>滕文公下</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-teng-wen-gong-ii.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-7" playOrder="7">
+      <navLabel>
+        <text>離婁上</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-li-lou-i.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-8" playOrder="8">
+      <navLabel>
+        <text>離婁下</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-li-lou-ii.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-9" playOrder="9">
+      <navLabel>
+        <text>萬章上</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-wan-zhang-i.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-10" playOrder="10">
+      <navLabel>
+        <text>萬章下</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-wan-zhang-ii.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-11" playOrder="11">
+      <navLabel>
+        <text>告子上</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-gaozi-i.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-12" playOrder="12">
+      <navLabel>
+        <text>告子下</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-gaozi-ii.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-13" playOrder="13">
+      <navLabel>
+        <text>盡心上</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-jin-xin-i.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-14" playOrder="14">
+      <navLabel>
+        <text>盡心下</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-confucianism-jin-xin-ii.xhtml" />
+    </navPoint>
+  </navMap>
+</ncx>

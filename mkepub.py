@@ -8,7 +8,9 @@ with open('booklist.jl', 'r', encoding='utf-8') as f:
 		item = json.loads(line)
 		ebook_name = item['bookname']
 		if os.path.exists(os.sep.join(['epub', ebook_name])):
+			print('EBook', ebook_name, 'existed')
 			continue
+		print('EBook', ebook_name, 'generating...')
 		config = {}
 		config['booktype'] = item['booktype']
 		config['bookname'] = ebook_name
