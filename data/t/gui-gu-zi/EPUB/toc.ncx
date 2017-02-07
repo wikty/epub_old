@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta content="xxxxxxxx-xxxxxxxx" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>鬼谷子</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>捭闔</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-bai-he.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>反應</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-fan-ying.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>內揵</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-nei-qian.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>抵巇</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-di-xi.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-5" playOrder="5">
+      <navLabel>
+        <text>飛箝</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-fei-qian.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-6" playOrder="6">
+      <navLabel>
+        <text>忤合</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-wu-he.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-7" playOrder="7">
+      <navLabel>
+        <text>揣篇</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-chuai-pian.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-8" playOrder="8">
+      <navLabel>
+        <text>摩篇</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-mo-pian.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-9" playOrder="9">
+      <navLabel>
+        <text>權篇</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-quan-pian.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-10" playOrder="10">
+      <navLabel>
+        <text>謀篇</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-mou-pian.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-11" playOrder="11">
+      <navLabel>
+        <text>決篇</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-jue-pian.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-12" playOrder="12">
+      <navLabel>
+        <text>符言</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-fu-yan.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-13" playOrder="13">
+      <navLabel>
+        <text>盛神法五龍</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-sheng-shen-fa-wu-long.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-14" playOrder="14">
+      <navLabel>
+        <text>養志法靈龜</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-yang-zhi-fa-ling-gui.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-15" playOrder="15">
+      <navLabel>
+        <text>實意法螣蛇</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-shi-yi-fa-teng-she.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-16" playOrder="16">
+      <navLabel>
+        <text>分威法伏熊</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-fen-wei-fa-fu-xiong.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-17" playOrder="17">
+      <navLabel>
+        <text>散勢法鷙鳥</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-san-shi-fa-zhi-niao.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-18" playOrder="18">
+      <navLabel>
+        <text>轉圓法猛獸</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-zhuan-yuan-fa-meng-shou.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-19" playOrder="19">
+      <navLabel>
+        <text>損兌法靈蓍</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-sun-dui-fa-ling-shi.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-20" playOrder="20">
+      <navLabel>
+        <text>持樞</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-chi-shu.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-21" playOrder="21">
+      <navLabel>
+        <text>中經</text>
+      </navLabel>
+      <content src="xhtml/pre-qin-and-han-miscellaneous-schools-zhong-jing.xhtml" />
+    </navPoint>
+  </navMap>
+</ncx>

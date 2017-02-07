@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" prefix="rendition: http://www.idpf.org/vocab/rendition/#" unique-identifier="book-id" version="3.0" xml:lang="en">
+   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:identifier id="book-id">xxxxxxxx-xxxxxxxx</dc:identifier>
+      <dc:title>鬼谷子</dc:title>
+      <dc:creator>〔朝代〕作者名　身份</dc:creator>
+      <dc:publisher>©藝雅出版社</dc:publisher>
+      <dc:language>zh-cn</dc:language>
+      <meta property="dcterms:modified">2016-11-30T09:51:15Z</meta>
+      <meta property="rendition:layout">reflowable</meta>
+      <meta property="rendition:orientation">auto</meta>
+      <meta property="rendition:spread">auto</meta>
+      <meta content="0.7.4" name="Sigil version" />
+   </metadata>
+   <manifest>
+      <item href="xhtml/nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+      <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+      <item href="img/cover.jpg" id="cover.jpg" media-type="image/jpeg" />
+      <item href="css/main.css" id="main.css" media-type="text/css" />
+      <item href="xhtml/coverpage.xhtml" id="coverpage.xhtml" media-type="application/xhtml+xml"/>
+      <item href="xhtml/frontpage.xhtml" id="frontpage.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/contents.xhtml" id="contents.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-bai-he.xhtml" id="pre-qin-and-han-miscellaneous-schools-bai-he.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-fan-ying.xhtml" id="pre-qin-and-han-miscellaneous-schools-fan-ying.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-nei-qian.xhtml" id="pre-qin-and-han-miscellaneous-schools-nei-qian.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-di-xi.xhtml" id="pre-qin-and-han-miscellaneous-schools-di-xi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-fei-qian.xhtml" id="pre-qin-and-han-miscellaneous-schools-fei-qian.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-wu-he.xhtml" id="pre-qin-and-han-miscellaneous-schools-wu-he.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-chuai-pian.xhtml" id="pre-qin-and-han-miscellaneous-schools-chuai-pian.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-mo-pian.xhtml" id="pre-qin-and-han-miscellaneous-schools-mo-pian.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-quan-pian.xhtml" id="pre-qin-and-han-miscellaneous-schools-quan-pian.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-mou-pian.xhtml" id="pre-qin-and-han-miscellaneous-schools-mou-pian.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-jue-pian.xhtml" id="pre-qin-and-han-miscellaneous-schools-jue-pian.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-fu-yan.xhtml" id="pre-qin-and-han-miscellaneous-schools-fu-yan.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-sheng-shen-fa-wu-long.xhtml" id="pre-qin-and-han-miscellaneous-schools-sheng-shen-fa-wu-long.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-yang-zhi-fa-ling-gui.xhtml" id="pre-qin-and-han-miscellaneous-schools-yang-zhi-fa-ling-gui.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-shi-yi-fa-teng-she.xhtml" id="pre-qin-and-han-miscellaneous-schools-shi-yi-fa-teng-she.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-fen-wei-fa-fu-xiong.xhtml" id="pre-qin-and-han-miscellaneous-schools-fen-wei-fa-fu-xiong.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-san-shi-fa-zhi-niao.xhtml" id="pre-qin-and-han-miscellaneous-schools-san-shi-fa-zhi-niao.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-zhuan-yuan-fa-meng-shou.xhtml" id="pre-qin-and-han-miscellaneous-schools-zhuan-yuan-fa-meng-shou.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-sun-dui-fa-ling-shi.xhtml" id="pre-qin-and-han-miscellaneous-schools-sun-dui-fa-ling-shi.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-chi-shu.xhtml" id="pre-qin-and-han-miscellaneous-schools-chi-shu.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/pre-qin-and-han-miscellaneous-schools-zhong-jing.xhtml" id="pre-qin-and-han-miscellaneous-schools-zhong-jing.xhtml" media-type="application/xhtml+xml" />
+   </manifest>
+   <spine toc="ncx">
+      <itemref idref="coverpage.xhtml" linear="yes"/>
+      <itemref idref="frontpage.xhtml" linear="yes"/>
+      <itemref idref="contents.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-bai-he.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-fan-ying.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-nei-qian.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-di-xi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-fei-qian.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-wu-he.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-chuai-pian.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-mo-pian.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-quan-pian.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-mou-pian.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-jue-pian.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-fu-yan.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-sheng-shen-fa-wu-long.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-yang-zhi-fa-ling-gui.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-shi-yi-fa-teng-she.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-fen-wei-fa-fu-xiong.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-san-shi-fa-zhi-niao.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-zhuan-yuan-fa-meng-shou.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-sun-dui-fa-ling-shi.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-chi-shu.xhtml" linear="yes"/>
+      <itemref idref="pre-qin-and-han-miscellaneous-schools-zhong-jing.xhtml" linear="yes"/>
+   </spine>
+   <guide>
+      <reference href="xhtml/coverpage.xhtml" type="cover" />
+   </guide>
+</package>

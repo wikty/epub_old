@@ -1,218 +1,181 @@
 # -*- coding:utf-8 -*-
-import os, errno, shutil, json, time
+import os, json, time
 from epubMaker.page_generator import PageGenerator
 from epubMaker.package_generator import PackageGenerator
+from epubMaker.epub_source import SourceSetup
+from epubMaker.chapter import ChapterRaw
+from epubMaker.article import ArticleRaw
+from epubMaker.template_manager import TplSimpleManager
 
 class EpubGenerator:
-    def __init__(self, bookname, bookcname, bookid, booktype, bookcat, author, publisher, rootpath, jsonfile, coverfile):
-        self.bookname = bookname
-        self.bookcname = bookcname
-        self.bookid = bookid
-        self.booktype = booktype if booktype in ['tw', 'zh'] else 'tw'
-        self.bookcat = bookcat
-        self.author = author
-        self.publisher = publisher
-        self.rootpath = rootpath.rstrip(os.sep) # without ending '/'
-        self.jsonfile = jsonfile # data json filename(should in rootpath director)
-        self.coverfile = coverfile # cover image filename(should in rootpath director)
-        self.coverpage = 'coverpage.xhtml'
-        self.frontpage = 'frontpage.xhtml'
-        self.contentspage = 'contents.xhtml'
-        self.navpage = 'nav.xhtml'
-        self.packagefile = 'package.opf'
-        self.ncxfile = 'toc.ncx'
-        #self.images = set() # without extend name '.jpg'
+
+    def __init__(self, config):
+        # initial: make directories and copy files
+        SourceSetup.run(
+            config.get_target_epub_dirs(), 
+            config.get_target_epub_files(), 
+            config.get_source_epub_files()
+        )
+
+        self.config = config
+        # standalone means that the book don't have chapters
+        self.isstandalone = config.is_standalone_book()
+        if not self.isstandalone:
+            self.chapterid_list = config.get_chapter_id()
+
+        # data source
+        self.jsonfile = config.get_source_data_filename('jsonfile')
+        self.metafile = config.get_source_data_filename('metafile')
+
+        # generated articles will be combined into epub file
         self.articles = []
-        self.currentdir = os.path.dirname(os.path.realpath(__file__)).rstrip(os.sep)
-        self.metainfdir = ''
-        self.xhtmldir = ''
-        self.imgdir = ''
-        self.jsdir = ''
-        self.cssdir = ''
-        self.makedirs()
-        self.cpyfiles()
-        self.covertitle = '封面'
-        if self.booktype == 'tw':
-            self.contentstitle = '目錄'
-            self.fronttitle = '版權信息'
-            self.navtitle = '目錄'
-        else:
-            self.contentstitle = '目录'
-            self.fronttitle = '版权信息'
-            self.navtitle = '目录'
+        self.chapters = []
 
-    def makedirs(self):
-        bookname = self.bookname
-        rootpath = self.rootpath
-        currentdir = self.currentdir
+        # book basic information
+        self.bookname = config.get_bookname()
+        self.bookcname = config.get_bookcname()
+        self.booktype = config.get_booktype()
+        
+        # book meta information
+        self.bookid = config.get_book_meta('bookid')
+        self.bookcat = config.get_book_meta('bookcat')
+        self.author = config.get_book_meta('author')
+        self.publisher = config.get_book_meta('publisher')
+        self.covertitle = config.get_book_meta('covertitle')
+        self.contentstitle = config.get_book_meta('contentstitle')
+        self.fronttitle = config.get_book_meta('fronttitle')
+        self.navtitle = config.get_book_meta('navtitle')
 
-        # create epub resource directories
-        self.metainfdir = os.sep.join([rootpath, 'epub', bookname,'META-INF'])
-        self.epubdir = os.sep.join([rootpath, 'epub', bookname,'EPUB'])
-        self.xhtmldir = os.sep.join([rootpath, 'epub', bookname,'EPUB','xhtml'])
-        self.imgdir = os.sep.join([rootpath, 'epub', bookname,'EPUB','img'])
-        self.jsdir = os.sep.join([rootpath, 'epub', bookname,'EPUB','js'])
-        self.cssdir = os.sep.join([rootpath, 'epub', bookname,'EPUB','css'])
-        dirs = [
-            self.metainfdir, 
-            self.epubdir,
-            self.xhtmldir, 
-            self.imgdir, 
-            self.jsdir, 
-            self.cssdir
-        ]
-        for dirname in dirs:
-            try:
-                os.makedirs(dirname)
-            except OSError as e:
-                if e.errno != errno.EEXIST:
-                    raise
+        # target epub directory
+        self.target_rootdir = config.get_target_epub_dirname('root')
+        self.target_epubdir = config.get_target_epub_dirname('epub')
+        self.target_metainfdir = config.get_target_epub_dirname('metainf')
+        self.target_xhtmldir = config.get_target_epub_dirname('xhtml')
+        self.target_cssdir = config.get_target_epub_dirname('css')
+        self.target_jsdir = config.get_target_epub_dirname('js')
+        self.target_imgdir = config.get_target_epub_dirname('img')
+        
+        # some target epub resource filename
+        self.target_coverpage = config.get_target_epub_filename('coverpage', False)
+        self.target_frontpage = config.get_target_epub_filename('frontpage', False)
+        self.target_contentspage = config.get_target_epub_filename('contentspage', False)
+        self.target_navpage = config.get_target_epub_filename('navpage', False)
+        self.target_packagefile = config.get_target_epub_filename('packagefile', False)
+        self.target_ncxfile = config.get_target_epub_filename('ncxfile', False)
+        self.target_maincssfile = config.get_target_epub_filename('maincssfile', False)
+        self.target_coverfile = config.get_target_epub_filename('coverfile', False)
 
-    def cpyfiles(self):
-        currentdir = self.currentdir
-        bookname = self.bookname
-        rootpath = self.rootpath
-        coverfile = self.coverfile
-        # copy epub resource files
-        shutil.copy(os.sep.join([currentdir, 'epub', 'mimetype']), 
-            os.sep.join([rootpath, 'epub', bookname, 'mimetype']))
-        shutil.copy(os.sep.join([currentdir, 'epub', 'META-INF', 'container.xml']), 
-            os.sep.join([rootpath, 'epub', bookname, 'META-INF', 'container.xml']))
-        shutil.copy(os.sep.join([currentdir, 'epub', 'EPUB', 'css', 'main.css']), 
-            os.sep.join([rootpath, 'epub', bookname, 'EPUB', 'css', 'main.css']))
-        shutil.copy(os.sep.join([rootpath, coverfile]), 
-            os.sep.join([rootpath, 'epub', bookname, 'EPUB', 'img', 'cover.jpg']))
+        # chapter&article id prefix in the contents
+        self.article_id_prefix = config.get_prefix_of_article_in_contents()
+        self.chapter_id_prefix = config.get_prefix_of_chapter_in_contents()
+        
+        # template directory
+        self.templatedir = config.get_templatedir()
+        # template manager
+        self.tplmanager = TplSimpleManager(self.templatedir)
+
+        self.generator = PageGenerator(self.target_xhtmldir, {
+            'booktype': self.booktype,
+            'navtitle': self.navtitle,
+            'covertitle': self.covertitle,
+            'fronttitle': self.fronttitle,
+            'contentstitle': self.contentstitle,
+            'navpage': self.target_navpage,
+            'coverpage': self.target_coverpage,
+            'frontpage': self.target_frontpage,
+            'contentspage': self.target_contentspage,
+            'maincssfile': self.target_maincssfile,
+            'coverfile': self.target_coverfile,
+            'article_id_prefix': self.article_id_prefix,
+            'chapter_id_prefix': self.chapter_id_prefix
+        })
+
+        self.packager = PackageGenerator(self.target_epubdir, {
+            'packagefile': self.target_packagefile,
+            'ncxfile': self.target_ncxfile,
+            'navpage': self.target_navpage,
+            'coverpage': self.target_coverpage,
+            'frontpage': self.target_frontpage,
+            'contentspage': self.target_contentspage,
+            'maincssfile': self.target_maincssfile,
+            'coverfile': self.target_coverfile,
+            'booktype': self.booktype,
+            'bookid': self.bookid,
+            'bookcname': self.bookcname,
+            'author': self.author,
+            'publisher': self.publisher
+        })
 
     def run(self):
+        self.generate_epub()
+        self.generate_package()
+
+    def generate_epub(self):
         self.generate_articles()
+        self.generate_chapters()
         self.generate_coverpage()
         self.generate_frontpage()
         self.generate_contentspage()
         self.generate_navpage()
-        self.generate_package()
-    
-    def generate_articles(self):
-        jsonfile = os.sep.join([self.rootpath, self.jsonfile])
-        # generate xhtml documents
-        with open(jsonfile, 'r', encoding='utf-8') as f:
-            for line in f:
-                article = json.loads(line)
-                '''
-                article.keys()
-                ['en_title', 'en_sub_category', 'filename', 'book', 'en_book', 'conten
-t', 'title', 'en_category', 'sub_category', 'category']
-                '''
-                if not article['filename'] or not article['content']:
-                    raise Exception('filename and content must be filled')
-                # for key in article:
-                #     if key == 'content':
-                #         article[key] = '\n'.join(['<p>' + l + '</p>'  for l in article[key]])
-                    # elif key == 'comment':
-                    #     article[key] = '\n'.join(['<p>' + l + '</p>' for l in article[key]])
-                article['content'] = '\n'.join(['<p>' + l + '</p>'  for l in article['content']])
-                if 'comment' not in article:
-                    article['comment'] = []
-                else:
-                    article['content'] = article['content'] + '\n<hr/>\n<p class="footnote">【注释】</p>\n' + '\n'.join(['<p class="footnote">' + l + '</p>' for l in article['comment']])
-                article['contentspage'] = self.contentspage
-                self.articles.append(article)
-
-        self.articles.sort(key = lambda item: item['article_id'])
-        #self.articles.sort(key=lambda item: item['en_title'].replace('-', ''))
-        count = 1
-        for article in self.articles:
-            if article['article_id'] != count:
-                raise Exception('article lost')
-            count += 1
-            article_file_name = os.sep.join([
-                self.xhtmldir,
-                '.'.join([article['filename'], 'xhtml'])
-            ])
-
-            PageGenerator.generate_article(article_file_name, article)
-    
-    def generate_coverpage(self):
-        cover_file_name = os.sep.join([self.xhtmldir, self.coverpage])
-        PageGenerator.generate_coverpage(cover_file_name, {'cover': self.coverfile})
-
-    def generate_frontpage(self):
-        front_file_name = os.sep.join([self.xhtmldir, self.frontpage])
-        if self.booktype == 'zh':
-            shutil.copy(os.sep.join([self.currentdir, 'epub', 'EPUB', 'xhtml', 'frontpage_simplified_ch.xhtml']), front_file_name)
-        elif self.booktype == 'tw':
-            shutil.copy(os.sep.join([self.currentdir, 'epub', 'EPUB', 'xhtml', 'frontpage_traditional_ch.xhtml']), front_file_name)
-        today = time.localtime()
-        data = {
-            'book_name': self.bookcname,
-            'author': self.author,
-            'book_category': self.bookcat,
-            'publisher': self.publisher,
-            'publish_year': str(today.tm_year),
-            'book_id': self.bookid,
-            'mod_year': str(today.tm_year),
-            'mod_month': str(today.tm_mon) if len(str(today.tm_mon)) == 2 else '0'+str(today.tm_mon),
-            'mod_day': str(today.tm_mday) if len(str(today.tm_mday)) == 2 else '0'+str(today.tm_mday)
-        }
-        PageGenerator.generate_frontpage(front_file_name, data)
-
-    def generate_contentspage(self):
-        contents_file_name = os.sep.join([self.xhtmldir, self.contentspage])
-        menu = []
-        for i in range(len(self.articles)):
-            article = self.articles[i]
-            item = '<p class="sgc-toc-level-1"><a href="{filename}.xhtml" id="{id}">{title}</a></p>'.format(filename=article['filename'], id=article['article_id'], title=article['title']) 
-            menu.append(item)
-
-        data = {
-            'content': '\n'.join(menu),
-            'title': self.contentstitle
-        }
-        PageGenerator.generate_contentspage(contents_file_name, data)
-
-    def generate_navpage(self):
-        menu = []
-        for i in range(len(self.articles)):
-            article = self.articles[i]
-            li = '    <li><a href="{filename}.xhtml">{title}</a></li>'.format(filename=article['filename'], title=article['title'])
-            menu.append(li)
-        nav_file_name = os.sep.join([self.xhtmldir, self.navpage])
-        data = {
-            'content': '\n'.join(menu),
-            'coverpage': self.coverpage,
-            'frontpage': self.frontpage,
-            'contentspage': self.contentspage,
-            'title': self.navtitle,
-            'covertitle': self.covertitle,
-            'fronttitle': self.fronttitle,
-            'contentstitle': self.contentstitle
-        }
-        PageGenerator.generate_navpage(nav_file_name, data)
 
     def generate_package(self):
-        package_file_name = os.sep.join([self.epubdir, self.packagefile])
-        data = {
-            'filename': package_file_name,
-            'title': self.bookcname,
+        self.packager.generate_opf(self.articles, self.chapters, self.tplmanager.get_template('opf'))
+        self.packager.generate_ncx(self.articles, self.chapters, self.tplmanager.get_template('ncx'))
+
+    def generate_articles(self):
+        with open(self.jsonfile, 'r', encoding='utf-8') as f:
+            for line in f:
+                article = ArticleRaw(json.loads(line))
+                self.generator.generate_article({
+                    'id': article.get_id(),
+                    'title': article.get_title(),
+                    'body': article.get_body()
+                }, self.tplmanager.get_template('article'))
+                self.articles.append([article.get_id(), article.get_title()])
+        self.articles = sorted(self.articles, key=lambda article: article[0])
+
+    def generate_chapters(self):
+        if self.isstandalone:
+            return
+        for chapterid in self.chapterid_list:
+            chapter = ChapterRaw(self.config.get_chapter(chapterid))
+            self.generator.generate_chapter({
+                'id': chapter.get_id(),
+                'title': chapter.get_title()
+            }, self.tplmanager.get_template('chapter'))
+            self.chapters.append([chapter.get_id(), chapter.get_title(), chapter.get_articles()])
+        self.chapters = sorted(self.chapters, key=lambda chapter: chapter[0])
+    
+    def generate_coverpage(self):
+        self.generator.generate_coverpage(self.tplmanager.get_template('cover'))
+
+    def generate_frontpage(self):
+        if self.booktype == 'tw':
+            tpl = self.tplmanager.get_template('front_tw')
+        else:
+            tpl = self.tplmanager.get_template('front_zh')
+        self.generator.generate_frontpage({
+            'bookid': 'xxxxxxxx-xxxxxxxx',
+            'bookcname': self.bookcname,
             'author': self.author,
             'publisher': self.publisher,
-            'bookid': self.bookid,
-            'coverfile': self.coverfile,
-            'navpage': self.navpage,
-            'coverpage': self.coverpage,
-            'frontpage': self.frontpage,
-            'contentspage': self.contentspage,
-            'ncxfile': self.ncxfile,
-            'articles': self.articles
-        }
+            'bookcat': self.bookcat,
+            'publish_year': 'xxxx',
+            'modify_year': 'xxxx',
+            'modify_month': 'xx',
+            'modify_day': 'xx'
+        }, tpl)
 
-        PackageGenerator.generate_opf(**data)
-        data = {
-            'filename': os.sep.join([self.epubdir, self.ncxfile]),
-            'bookid': self.bookid,
-            'bookcname': self.bookcname,
-            'articles': self.articles,
-            'covertitle': self.covertitle,
-            'contentstitle': self.contentstitle,
-            'fronttitle': self.fronttitle
-        }
-        PackageGenerator.generate_ncx(**data)
+    def generate_navpage(self):
+        self.generator.generate_navpage(
+            self.articles, 
+            self.chapters, 
+            self.tplmanager.get_template('nav')
+        )
+
+    def generate_contentspage(self):
+        self.generator.generate_contentspage(
+            self.articles, 
+            self.chapters, 
+            self.tplmanager.get_template('contents')
+        )

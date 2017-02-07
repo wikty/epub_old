@@ -2,7 +2,7 @@ import re, urllib, codecs, json
 import scrapy
 from w3lib.html import remove_tags, remove_tags_with_content
 from ebook import items
-from ebook.ItemLoaders.ctext_article_loader import CTextArticleLoader
+from ebook.item_loaders.ctext_article_loader import CTextArticleLoader
 
 class CTextSpider(scrapy.Spider):
 	name = 'ctext-menu-spider'

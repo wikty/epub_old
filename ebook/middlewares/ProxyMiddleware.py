@@ -1,20 +1,35 @@
 # -*- coding: utf-8 -*-
 import random
 
-# The proxy host format like: ip:port or username:password@ip:port
+class RandomIpMiddleware(object):
+    def __init__(self, http_proxy=None, tor_control_port=None, tor_password=None):
+        if not http_proxy:
+            raise Exception('http proxy setting should not be empty')
+        if not tor_control_port:
+            raise Exception('tor control port setting should not be empty')
+        if not tor_password:
+            raise Exception('tor password setting should not be empty')
+        self.http_proxy = http_proxy
+        self.tor_control_port = tor_control_port
+        self.tor_password = tor_password
+        self.count = 1
+        self.times = 50
 
-class RandomProxyMiddleware(object):
-	def __init__(self, proxies):
-		self.proxies = proxies
+    @classmethod
+    def from_crawler(cls, crawler):
+        http_proxy = crawler.settings.get('HTTP_PROXY')
+        tor_control_port = crawler.settings.get('TOR_CONTROL_PORT')
+        tor_password = crawler.settings.get('TOR_PASSWORD')
 
-	@classmethod
-	def from_crawler(cls, crawler):
-		proxy_list = []
-		with open(crawler.settings.get('PROXY_LIST'), 'r') as f:
-			proxy_list = [ip.strip() for ip in f]
+        return cls(http_proxy, tor_control_port, tor_password)
 
-		return cls(proxy_list)
-
-	def process_request(self, request, spider):
-		request.meta['proxy'] = 'http://{}'.format(random.choice(self.proxies))
-		print('Proxy:', request.meta['proxy'])
+    def process_request(self, request, spider):
+        self.count = (self.count+1) % self.times
+        if not self.count:
+            # access tor ControlPort to signal tor get a new IP
+            with Controller.from_port(port=self.tor_control_port) as controller:
+                controller.authenticate(password=self.tor_password)
+                controller.signal(Signal.NEWNYM)
+        
+        # scrapy support http proxy
+        request.meta['proxy'] = self.http_proxy

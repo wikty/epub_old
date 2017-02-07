@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" prefix="rendition: http://www.idpf.org/vocab/rendition/#" unique-identifier="book-id" version="3.0" xml:lang="en">
+   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:identifier id="book-id">xxxxxxxx-xxxxxxxx</dc:identifier>
+      <dc:title>三国演义</dc:title>
+      <dc:creator>〔朝代〕作者名　身份</dc:creator>
+      <dc:publisher>©艺雅出版社</dc:publisher>
+      <dc:language>zh-cn</dc:language>
+      <meta property="dcterms:modified">2016-12-15T17:24:27Z</meta>
+      <meta property="rendition:layout">reflowable</meta>
+      <meta property="rendition:orientation">auto</meta>
+      <meta property="rendition:spread">auto</meta>
+      <meta content="0.7.4" name="Sigil version" />
+   </metadata>
+   <manifest>
+         <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+      <item href="img/cover.jpg" id="cover.jpg" media-type="image/jpeg" />
+      <item href="css/main.css" id="main.css" media-type="text/css" />
+      <item href="xhtml/nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav" />
+      <item href="xhtml/coverpage.xhtml" id="coverpage" media-type="application/xhtml+xml" />
+      <item href="xhtml/frontpage.xhtml" id="frontpage" media-type="application/xhtml+xml" />
+      <item href="xhtml/contents.xhtml" id="contentspage" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0001.xhtml" id="simplified_article_0001.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0002.xhtml" id="simplified_article_0002.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0003.xhtml" id="simplified_article_0003.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0004.xhtml" id="simplified_article_0004.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0005.xhtml" id="simplified_article_0005.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0006.xhtml" id="simplified_article_0006.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0007.xhtml" id="simplified_article_0007.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0008.xhtml" id="simplified_article_0008.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0009.xhtml" id="simplified_article_0009.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0010.xhtml" id="simplified_article_0010.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0011.xhtml" id="simplified_article_0011.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0012.xhtml" id="simplified_article_0012.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0013.xhtml" id="simplified_article_0013.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0014.xhtml" id="simplified_article_0014.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0015.xhtml" id="simplified_article_0015.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0016.xhtml" id="simplified_article_0016.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0017.xhtml" id="simplified_article_0017.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0018.xhtml" id="simplified_article_0018.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0019.xhtml" id="simplified_article_0019.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0020.xhtml" id="simplified_article_0020.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0021.xhtml" id="simplified_article_0021.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0022.xhtml" id="simplified_article_0022.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0023.xhtml" id="simplified_article_0023.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0024.xhtml" id="simplified_article_0024.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0025.xhtml" id="simplified_article_0025.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0026.xhtml" id="simplified_article_0026.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0027.xhtml" id="simplified_article_0027.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0028.xhtml" id="simplified_article_0028.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0029.xhtml" id="simplified_article_0029.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0030.xhtml" id="simplified_article_0030.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0031.xhtml" id="simplified_article_0031.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0032.xhtml" id="simplified_article_0032.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0033.xhtml" id="simplified_article_0033.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0034.xhtml" id="simplified_article_0034.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0035.xhtml" id="simplified_article_0035.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0036.xhtml" id="simplified_article_0036.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0037.xhtml" id="simplified_article_0037.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0038.xhtml" id="simplified_article_0038.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0039.xhtml" id="simplified_article_0039.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0040.xhtml" id="simplified_article_0040.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0041.xhtml" id="simplified_article_0041.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0042.xhtml" id="simplified_article_0042.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0043.xhtml" id="simplified_article_0043.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0044.xhtml" id="simplified_article_0044.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0045.xhtml" id="simplified_article_0045.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0046.xhtml" id="simplified_article_0046.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0047.xhtml" id="simplified_article_0047.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0048.xhtml" id="simplified_article_0048.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0049.xhtml" id="simplified_article_0049.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0050.xhtml" id="simplified_article_0050.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0051.xhtml" id="simplified_article_0051.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0052.xhtml" id="simplified_article_0052.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0053.xhtml" id="simplified_article_0053.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0054.xhtml" id="simplified_article_0054.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0055.xhtml" id="simplified_article_0055.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0056.xhtml" id="simplified_article_0056.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0057.xhtml" id="simplified_article_0057.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0058.xhtml" id="simplified_article_0058.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0059.xhtml" id="simplified_article_0059.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0060.xhtml" id="simplified_article_0060.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0061.xhtml" id="simplified_article_0061.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0062.xhtml" id="simplified_article_0062.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0063.xhtml" id="simplified_article_0063.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0064.xhtml" id="simplified_article_0064.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0065.xhtml" id="simplified_article_0065.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0066.xhtml" id="simplified_article_0066.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0067.xhtml" id="simplified_article_0067.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0068.xhtml" id="simplified_article_0068.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0069.xhtml" id="simplified_article_0069.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0070.xhtml" id="simplified_article_0070.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0071.xhtml" id="simplified_article_0071.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0072.xhtml" id="simplified_article_0072.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0073.xhtml" id="simplified_article_0073.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0074.xhtml" id="simplified_article_0074.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0075.xhtml" id="simplified_article_0075.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0076.xhtml" id="simplified_article_0076.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0077.xhtml" id="simplified_article_0077.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0078.xhtml" id="simplified_article_0078.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0079.xhtml" id="simplified_article_0079.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0080.xhtml" id="simplified_article_0080.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0081.xhtml" id="simplified_article_0081.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0082.xhtml" id="simplified_article_0082.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0083.xhtml" id="simplified_article_0083.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0084.xhtml" id="simplified_article_0084.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0085.xhtml" id="simplified_article_0085.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0086.xhtml" id="simplified_article_0086.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0087.xhtml" id="simplified_article_0087.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0088.xhtml" id="simplified_article_0088.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0089.xhtml" id="simplified_article_0089.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0090.xhtml" id="simplified_article_0090.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0091.xhtml" id="simplified_article_0091.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0092.xhtml" id="simplified_article_0092.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0093.xhtml" id="simplified_article_0093.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0094.xhtml" id="simplified_article_0094.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0095.xhtml" id="simplified_article_0095.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0096.xhtml" id="simplified_article_0096.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0097.xhtml" id="simplified_article_0097.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0098.xhtml" id="simplified_article_0098.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0099.xhtml" id="simplified_article_0099.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0100.xhtml" id="simplified_article_0100.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0101.xhtml" id="simplified_article_0101.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0102.xhtml" id="simplified_article_0102.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0103.xhtml" id="simplified_article_0103.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0104.xhtml" id="simplified_article_0104.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0105.xhtml" id="simplified_article_0105.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0106.xhtml" id="simplified_article_0106.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0107.xhtml" id="simplified_article_0107.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0108.xhtml" id="simplified_article_0108.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0109.xhtml" id="simplified_article_0109.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0110.xhtml" id="simplified_article_0110.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0111.xhtml" id="simplified_article_0111.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0112.xhtml" id="simplified_article_0112.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0113.xhtml" id="simplified_article_0113.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0114.xhtml" id="simplified_article_0114.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0115.xhtml" id="simplified_article_0115.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0116.xhtml" id="simplified_article_0116.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0117.xhtml" id="simplified_article_0117.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0118.xhtml" id="simplified_article_0118.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0119.xhtml" id="simplified_article_0119.xhtml" media-type="application/xhtml+xml" />
+      <item href="xhtml/simplified_article_0120.xhtml" id="simplified_article_0120.xhtml" media-type="application/xhtml+xml" />
+   </manifest>
+   <spine toc="ncx">
+         <itemref idref="coverpage" linear="yes"/>
+      <itemref idref="frontpage" linear="yes"/>
+      <itemref idref="contentspage" linear="yes"/>
+      <itemref idref="simplified_article_0001.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0002.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0003.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0004.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0005.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0006.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0007.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0008.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0009.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0010.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0011.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0012.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0013.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0014.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0015.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0016.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0017.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0018.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0019.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0020.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0021.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0022.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0023.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0024.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0025.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0026.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0027.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0028.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0029.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0030.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0031.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0032.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0033.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0034.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0035.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0036.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0037.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0038.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0039.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0040.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0041.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0042.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0043.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0044.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0045.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0046.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0047.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0048.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0049.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0050.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0051.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0052.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0053.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0054.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0055.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0056.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0057.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0058.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0059.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0060.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0061.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0062.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0063.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0064.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0065.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0066.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0067.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0068.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0069.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0070.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0071.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0072.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0073.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0074.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0075.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0076.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0077.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0078.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0079.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0080.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0081.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0082.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0083.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0084.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0085.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0086.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0087.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0088.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0089.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0090.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0091.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0092.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0093.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0094.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0095.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0096.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0097.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0098.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0099.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0100.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0101.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0102.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0103.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0104.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0105.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0106.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0107.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0108.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0109.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0110.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0111.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0112.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0113.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0114.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0115.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0116.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0117.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0118.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0119.xhtml" linear="yes"/>
+      <itemref idref="simplified_article_0120.xhtml" linear="yes"/>
+   </spine>
+   <guide>
+      <reference href="xhtml/coverpage.xhtml" type="cover" />
+   </guide>
+</package>

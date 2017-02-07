@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+body {
+    padding: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 1%;
+    margin-right: 1%;
+    line-height:130%;
+    text-align: justify;
+}
+
+h1 {
+    line-height:130%;
+    text-align: center;
+    font-weight:bold;
+    font-size:2em;
+    margin-bottom: 1.2em;
+    margin-top: 1.2em;
+}
+h2 {
+    line-height:130%;
+    text-align: center;
+    font-weight:bold;
+    font-size:1.5em;
+    margin-bottom: 1.2em;
+}
+h3 {
+    line-height:130%;
+    text-align: left;
+    font-weight:bold;
+    font-size:1.2em;
+    margin-bottom: 1.2em;
+}
+h4 {
+    line-height:130%;
+    text-align: left;
+    font-weight:bold;
+    font-size:1.1em;
+    margin-bottom: 1.2em;
+}
+h5 {
+    line-height:130%;
+    text-align: left;
+    font-weight:bold;
+    font-size:1em;
+    margin-bottom: 1.2em;
+}
+h6 {
+    line-height:130%;
+    text-align: left;
+    font-weight:bold;
+    font-size:1em;
+    margin-bottom: 1.2em;
+}
+p {
+    text-align: justify;
+    text-indent: 2em;
+    line-height:130%;
+}
+p.footnote{
+    text-align: left;
+    text-indent: 0;
+
+}
+.sgc-toc-level-1{
+    text-indent: 0;
+}
+
+.sgc-toc-level-2{
+    text-indent: 0;
+    margin-left: 2em;
+}
+div.copyright{
+    width:100%;
+    padding:0px;
+}
+div.copyright p{
+    text-indent: 0;
+}
+sup{
+    font-size:70%;
+}
+div.toc a{
+     text-decoration:none;
+}
+a{
+     text-decoration:none;
+}
+a.footnote-link {
+    text-decoration:none;
+}
+
+.cover {
+    width:100%;
+    padding:0px;
+}
+.center {
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.left {
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.right {
+    text-align: right;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.change{
+    text-align: center;
+    margin-bottom: 2em;
+    text-indent: 0;
+
+}
+.inline{
+    height:1.1em;
+    width:1.1em;
+    vertical-align:bottom;
+    display:inline;
+}
+li{
+    margin-top: 1em;
+}
+.quote {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: justify;
+}
+.quote1 {
+    margin-top: 1em;
+    margin-bottom: 0%;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: justify;
+}

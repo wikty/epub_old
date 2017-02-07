@@ -1,4 +1,4 @@
-import codecs, json
+import codecs, json, re
 import scrapy
 from w3lib.html import remove_tags, remove_tags_with_content
 from scrapy.spidermiddlewares.httperror import HttpError
@@ -6,7 +6,7 @@ from twisted.internet.error import DNSLookupError
 from twisted.internet.error import TimeoutError, TCPTimedOutError
 
 from ebook import items
-from ebook.ItemLoaders.ctext_article_loader import CTextArticleLoader
+from ebook.item_loaders.ctext_article_loader import CTextArticleLoader
 
 class CTextBookListSpider(scrapy.Spider):
 	name = 'ctext-booklist-spider'
@@ -36,7 +36,7 @@ class CTextBookListSpider(scrapy.Spider):
 							url = article['url']+'?'+str(count)
 							self.start_urls.append(url)
 							count += 1
-							print('Add URL: {}'.format(url))
+							self.logger.info('Add URL: {}'.format(url))
 						else:
 							self.logger.error('bad article url: {}'.format(article.get('name', '')))
 

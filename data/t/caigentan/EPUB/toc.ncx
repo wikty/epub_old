@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta content="xxxxxxxx-xxxxxxxx" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>菜根谭</text>
+  </docTitle>
+  <navMap>
+    
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>修身</text>
+      </navLabel>
+      <content src="xhtml/simplified_article_0001.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>应酬</text>
+      </navLabel>
+      <content src="xhtml/simplified_article_0002.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>评议</text>
+      </navLabel>
+      <content src="xhtml/simplified_article_0003.xhtml" />
+    </navPoint>
+
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>闲适</text>
+      </navLabel>
+      <content src="xhtml/simplified_article_0004.xhtml" />
+    </navPoint>
+  </navMap>
+</ncx>

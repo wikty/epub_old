@@ -1,0 +1,200 @@
+Validating using EPUB version 3.0.1 rules.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(208,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(243,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(264,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(271,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(278,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(299,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(306,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(320,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(341,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(369,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(390,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(453,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(509,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(523,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(551,47): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-005): book-of-changes.epub/EPUB/toc.ncx(565,49): Error while parsing file 'playOrder sequence has gaps'.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xi-ci-shang.xhtml(10,40): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xi-ci-xia.xhtml(10,40): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-shuo-gua.xhtml(10,40): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xu-gua.xhtml(10,40): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-za-gua.xhtml(10,40): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-qian.xhtml(10,40): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kun.xhtml(10,40): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-zhun.xhtml(10,40): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-meng.xhtml(10,40): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xu.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-song.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-shi.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-bi.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xiao-xu.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-lu.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-tai.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-pi.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-tong-ren.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-you.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-qian1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-yu.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-sui.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gu.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-lin.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-guan.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-shi-he.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-bi1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-bo.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-xu.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-yi.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-guo.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kan.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-li.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-heng.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-dun.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-zhuang.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jia-ren.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jie.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-yi1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-guai.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gou.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-sheng.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jing.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ge.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-zhen.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gen.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jian1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-lu1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xun.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-dui.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-huan.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-zhong-fu.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xiao-guo.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ji-ji.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-qian2.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kun2.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-zhun1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-meng1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xu1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-song1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-shi1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-bi2.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xiao-xu1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-tai1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-pi1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-tong-ren1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-you1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-qian3.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-yu1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-sui1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gu1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-guan1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-shi-he1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-bo1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-fu1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-wu-wang1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-xu1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-guo1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kan1.xhtml(10,41): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xian1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-heng1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-dun1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-zhuang1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jin1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ming-yi1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jia-ren1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kui1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jian2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jie2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-sun1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-yi3.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-guai1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gou1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-cui1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-sheng1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kun3.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jing1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ge1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ding1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-zhen1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gen1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jian3.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gui-mei1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-feng1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-lu3.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xun1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-dui1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-huan1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jie3.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-zhong-fu1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xiao-guo1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ji-ji1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-wei-ji1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gan.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kun4.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-zhun2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-meng2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xu2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-song2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-shi2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-bi4.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xiao-chu.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-lv.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-tai2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-fou.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-tong-ren2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-you2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-qian4.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-yu2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-sui2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gu2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-lin2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-guan2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-shi-ke.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-bi5.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-bo2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-fu2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-wu-wang2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-chu.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-yi4.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-guo2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kan2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-li2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xian2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-heng2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-dun2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-da-zhuang2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jin2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ming-yi2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jia-ren2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kui2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jian4.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jie4.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-sun2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-yi5.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-guai2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gou2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-cui2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-sheng2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kun5.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jing2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ge2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ding2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-zhen2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gen2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jian5.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gui-mei2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-feng2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-lv1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xun2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-dui2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-huan2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-jie5.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-zhong-fu2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-xiao-guo2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-ji-ji2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-wei-ji2.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-gan1.xhtml(10,42): Fragment identifier is not defined.
+ERROR(RSC-012): book-of-changes.epub/EPUB/xhtml/pre-qin-and-han-ancient-classics-kun6.xhtml(10,42): Fragment identifier is not defined.
+
+Check finished with errors
+
+epubcheck completed

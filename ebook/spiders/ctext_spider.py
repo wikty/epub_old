@@ -2,7 +2,7 @@ import re
 import scrapy
 from w3lib.html import remove_tags, remove_tags_with_content
 from ebook import items
-from ebook.ItemLoaders.ctext_article_loader import CTextArticleLoader
+from ebook.item_loaders.ctext_article_loader import CTextArticleLoader
 
 class CTextSpider(scrapy.Spider):
 	name = 'ctext-spider'
@@ -112,19 +112,19 @@ class CTextSpider(scrapy.Spider):
 			nodes = item.xpath('child::node()[not(@class="refs")]').extract()
 			ln = ''.join([remove_tags(nd.strip(), keep=('sup',)) for nd in nodes if remove_tags(nd.strip(), keep=('sup',))])
 			ln = re.sub(r'<sup\s+[\w"=\']+>(\d+)</sup>', r'<sup><a href="#comment\1" id="reference\1">\1</a></sup>', ln)
-			# if int(item.xpath('contains(@class, "mctext")').extract_first()):
-			# 	content[len(content)-1] = '<br/>'.join([content[len(content)-1], ln])
-			# else:
-			# 	content.append(ln)
-			content.append(ln)
 			if int(item.xpath('contains(@class, "mctext")').extract_first()):
-				content.append('<br/>')
+				content[len(content)-1] = '<br/>'.join([content[len(content)-1], ln])
+			else:
+				content.append(ln)
+			# content.append(ln)
+			# if int(item.xpath('contains(@class, "mctext")').extract_first()):
+			# 	content.append('<br/>')
 			for cmt in item.xpath('*[contains(@class, "refs")]'):
 				cmt = ''.join([cmti.strip() for cmti in cmt.css('::text').extract() if cmti.strip()])
 				mch = re.match('(\d+)\.\s+', cmt)
 				if mch:
 					cmtid = mch.group(1)
-					cmt = '<a id="comment{id}" href="#reference{id}">{id}.</a> '.format(id=cmtid) + cmt[mch.regs[0][1]:]
+					cmt = '<a id="comment{id}" href="#reference{id}">{id} </a> '.format(id=cmtid) + cmt[mch.regs[0][1]:]
 					comment.append(cmt)
 		l.add_value('content', content)
 		l.add_value('comment', comment)

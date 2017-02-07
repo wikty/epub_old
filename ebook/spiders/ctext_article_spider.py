@@ -2,7 +2,7 @@ import re
 import scrapy
 from w3lib.html import remove_tags, remove_tags_with_content
 from ebook import items
-from ebook.ItemLoaders.ctext_article_loader import CTextArticleLoader
+from ebook.item_loaders.ctext_article_loader import CTextArticleLoader
 
 class CTextArticleSpider(scrapy.Spider):
 	article_id = 1
@@ -51,10 +51,13 @@ class CTextArticleSpider(scrapy.Spider):
 				sup_count += 1
 				# ln = re.sub(r'<sup\s+[\w"=\']+>\s*(\d+)\s*</sup>', r'<sup><a class="footnote-link" href="#comment\1" id="reference\1">&#91;\1&#93;</a></sup>', ln)
 				ln = re.sub(r'<sup\s+[\w"=\']+>\s*(\d+)\s*</sup>', '<sup><a class="footnote-link" href="#comment{id}" id="reference{id}">&#91;{id}&#93;</a></sup>'.format(id=sup_count), ln)
-			
-			content.append(ln)
 			if int(item.xpath('contains(@class, "mctext")').extract_first()):
-				content.append('<br/>')
+				content[len(content)-1] = '<br/>'.join([content[len(content)-1], ln])
+			else:
+				content.append(ln)
+			# content.append(ln)
+			# if int(item.xpath('contains(@class, "mctext")').extract_first()):
+			# 	content.append('<br/>')
 
 			for cmt in item.xpath('*[contains(@class, "refs")]'):
 				cmt = ''.join([cmti.strip() for cmti in cmt.css('::text').extract() if cmti.strip()])

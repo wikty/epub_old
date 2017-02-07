@@ -1,111 +1,167 @@
 # -*- coding:utf-8 -*-
+import os
+from epubMaker.utils import chapterid2filename, articleid2filename
+
 class PageGenerator():
-    @staticmethod
-    def generate(filename, template, data):
+
+    def __init__(self, targetdir, extra):
+        if not os.path.exists(targetdir):
+            raise Exception('target directory {} not existed'.format(targetdir))
+        targetdir = targetdir.rstrip(os.sep)
+
+        self.targetdir = targetdir
+        self.booktype = extra['booktype']
+        self.coverpage = extra['coverpage']
+        self.frontpage = extra['frontpage']
+        self.contentspage = extra['contentspage']
+        self.navpage = extra['navpage']
+        self.coverfile = extra['coverfile']
+        self.maincssfile = extra['maincssfile']
+        self.covertitle = extra['covertitle']
+        self.fronttitle = extra['fronttitle']
+        self.contentstitle = extra['contentstitle']
+        self.navtitle = extra['navtitle']
+        self.article_id_prefix = extra['article_id_prefix']
+        self.chapter_id_prefix = extra['chapter_id_prefix']
+
+    def get_navpage_li(self, filename, title):
+        return '    <li><a href="{filename}">{title}</a></li>'.format(
+            filename=filename, 
+            title=title)
+
+    def get_contentspage_p(self, level, filename, id_prefix, id, title):
+        return '<p class="sgc-toc-level-{level}"><a href="{filename}" id="{id_prefix}{id}">{title}</a></p>'.format(
+            level=level,
+            filename=filename,
+            id_prefix=id_prefix,
+            id=id,
+            title=title)
+
+    def generate_article(self, article, tpl):
+        filename = articleid2filename(article['id'], self.booktype)
+        filename = os.sep.join([self.targetdir, filename])
+        
         with open(filename, 'w', encoding='utf-8') as f:
-            f.write(template.format(**data))
+            f.write(tpl.format({
+                'article_id': article['id'],
+                'article_id_prefix': self.article_id_prefix,
+                'title': article['title'],
+                'content': article['body'],
+                'maincssfile': self.maincssfile,
+                'contentspage': self.contentspage
+            }))
+        return filename
 
-    @staticmethod
-    def generate_article(filename, article):
-        PageGenerator.generate(filename, PageGenerator.ARTICLE_TEMPLATE, article)
+    def generate_chapter(self, chapter, tpl):
+        filename = chapterid2filename(chapter['id'], self.booktype)
+        filename = os.sep.join([self.targetdir, filename])
 
-    @staticmethod
-    def generate_navpage(filename, data):
-        PageGenerator.generate(filename, PageGenerator.NAV_TEMPLATE, data)
-
-    @staticmethod
-    def generate_coverpage(filename, data):
         with open(filename, 'w', encoding='utf-8') as f:
-            content = PageGenerator.COVER_TEMPLATE
-            for key in data:
-                content = content.replace('{'+key+'}', data[key])
-            f.write(content)
+            f.write(tpl.format({
+                'chapter_id': chapter['id'],
+                'chapter_id_prefix': self.chapter_id_prefix,
+                'title': chapter['title'],
+                'maincssfile': self.maincssfile,
+                'contentspage': self.contentspage
+            }))
+        return filename
 
-    @staticmethod
-    def generate_frontpage(filename, data):
-        content = ''
-        with open(filename, 'r', encoding='utf-8') as f:
-            content = f.read()
-            for key in data:
-                content = content.replace('{'+key+'}', data[key])
+    def generate_coverpage(self, tpl):
+        filename = os.sep.join([self.targetdir, self.coverpage])
+        
         with open(filename, 'w', encoding='utf-8') as f:
-            f.write(content)
+            f.write(tpl.format({
+                'coverfile': self.coverfile,
+                'title': self.covertitle
+            }))
+        return filename
 
-    @staticmethod
-    def generate_contentspage(filename, data):
-        PageGenerator.generate(filename, PageGenerator.CONTENTS_TEMPLATE, data)
+    def generate_frontpage(self, bookinfo, tpl):
+        filename = os.sep.join([self.targetdir, self.frontpage])
+        
+        with open(filename, 'w', encoding='utf-8') as f:
+            fields = {
+                'maincssfile': self.maincssfile,
+                'title': self.fronttitle,
+                'book_name': bookinfo['bookcname'],
+                'book_category': bookinfo['bookcat'],
+                'author': bookinfo['author'],
+                'publish_year': bookinfo['publish_year'],
+                'bookid': bookinfo['bookid'],
+                'modify_year': bookinfo['modify_year'],
+                'modify_month': bookinfo['modify_month'],
+                'modify_day': bookinfo['modify_day']
+            }
+            f.write(tpl.format(fields))
+        return filename
 
-    ARTICLE_TEMPLATE = \
-"""<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:epub="http://www.idpf.org/2007/ops" >
-    <head>
-        <meta charset="utf-8"/>
-        <link href="../css/main.css" rel="stylesheet" type="text/css" />
-        <title>{title}</title>
-    </head>
-    <body>
-        <h2><a href="{contentspage}#{article_id}">{title}</a></h2>
-        {content}
-    </body>
-</html>"""
+    def generate_navpage(self, articles, chapters, tpl):
+        filename = os.sep.join([self.targetdir, self.navpage])
+        
+        with open(filename, 'w', encoding='utf-8') as f:
+            if chapters:
+                l = []
+                for chapid, chaptitle, chap_articles in chapters:
+                    chapfile = chapterid2filename(chapid, self.booktype)
+                    li = self.get_navpage_li(chapfile, chaptitle)
+                    l.append(li)
+                    for article_id in chap_articles:
+                        found = False
+                        for artid, arttitle in articles:
+                            if artid == article_id:
+                                artfile = articleid2filename(artid, self.booktype)
+                                li = self.get_navpage_li(artfile, arttitle)
+                                l.append(li)
+                                found = True
+                                break
+                        # if not found:
+                        #     raise Exception('article %d not in chapter %s' % (article_id, chaptitle))
+            else:
+                l = []
+                for artid, arttitle in articles:
+                    artfile = articleid2filename(artid, self.booktype)
+                    li = self.get_navpage_li(artfile, arttitle)
+                    l.append(li)
+            content = '\n'.join(l)
+            f.write(tpl.format({
+                'maincssfile': self.maincssfile,
+                'title': self.navtitle,
+                'content': content,
+                'covertitle': self.covertitle,
+                'contentstitle': self.contentstitle,
+                'fronttitle': self.fronttitle,
+                'coverpage': self.coverpage,
+                'frontpage': self.frontpage,
+                'contentspage': self.contentspage
+            }))
+        return filename
 
-    NAV_TEMPLATE = \
-"""<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" xmlns:epub="http://www.idpf.org/2007/ops">
-<head>
-<link href="../css/main.css" rel="stylesheet" type="text/css" />
-<title>{title}</title>
-</head>
-<body>
-<nav epub:type="toc" id="toc">
-  <h2>{title}</h2>
-  <ol epub:type="list">
-    <li><a href="{coverpage}">{covertitle}</a></li>
-    <li><a href="{frontpage}">{fronttitle}</a></li>
-    <li><a href="{contentspage}">{contentstitle}</a></li>
-{content}
-  </ol>
-</nav>
-</body>
-</html>"""
-
-    COVER_TEMPLATE = \
-"""<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" xmlns:epub="http://www.idpf.org/2007/ops" >
-    <head>
-        <meta content="true" name="calibre:cover" />
-        <title>封面</title>
-        <style type="text/css">
-            @page {padding: 0pt; margin:0pt}
-            body { text-align: center; padding:0pt; margin: 0pt; }
-        </style>
-    </head>
-    <body>
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" height="100%" preserveAspectRatio="xMidYMid meet" version="1.1" viewBox="0 0 900 1380" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <image height="1380" width="900" xlink:href="../img/{cover}"></image>
-            </svg>
-        </div>
-    </body>
-</html>"""
-
-    CONTENTS_TEMPLATE = \
-"""<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" xmlns:xml="http://www.w3.org/XML/1998/namespace">
-<head>
-  <link href="../css/main.css" rel="stylesheet" type="text/css" />
-  <title>{title}</title>
-</head>
-
-<body>
-<div class="toc">
-  <h2>{title}</h2>
-  {content}
-</div>
-</body>
-</html>"""
+    def generate_contentspage(self, articles, chapters, tpl):
+        filename = os.sep.join([self.targetdir, self.contentspage])
+        
+        with open(filename, 'w', encoding='utf-8') as f:
+            if chapters:
+                l = []
+                for chapid, chaptitle, chap_articles in chapters:
+                    chapfile = chapterid2filename(chapid, self.booktype)
+                    p = self.get_contentspage_p(1, chapfile, self.chapter_id_prefix, chapid, chaptitle)
+                    l.append(p)
+                    for article_id in chap_articles:
+                        for artid, arttitle in articles:
+                            if artid == article_id:
+                                artfile = articleid2filename(artid, self.booktype)
+                                p = self.get_contentspage_p(2, artfile, self.article_id_prefix, artid, arttitle)
+                                l.append(p)
+            else:
+                l = []
+                for artid, arttitle in articles:
+                    artfile = articleid2filename(artid, self.booktype)
+                    p = self.get_contentspage_p(1, artfile, self.article_id_prefix, artid, arttitle)
+                    l.append(p)
+            content = '\n'.join(l)
+            f.write(tpl.format({
+                'maincssfile': self.maincssfile,
+                'title': self.contentstitle,
+                'content': content
+            }))
+        return filename

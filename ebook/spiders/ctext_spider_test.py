@@ -2,7 +2,7 @@ import re
 import scrapy
 from w3lib.html import remove_tags, remove_tags_with_content
 from ebook import items
-from ebook.ItemLoaders.ctext_article_loader import CTextArticleLoader
+from ebook.item_loaders.ctext_article_loader import CTextArticleLoader
 
 class CTextSpiderTest(scrapy.Spider):
 	count = 0

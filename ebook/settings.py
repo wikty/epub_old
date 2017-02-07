@@ -24,17 +24,17 @@ NEWSPIDER_MODULE = 'ebook.spiders'
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 4
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 2
+#DOWNLOAD_DELAY = 5
 # randomize download delay = 0.5~1.5 * DOWNLOAD_DELAY 
-RANDOMIZE_DOWNLOAD_DELAY = True
+#RANDOMIZE_DOWNLOAD_DELAY = True
 # The download delay setting will honor only one of:
-CONCURRENT_REQUESTS_PER_DOMAIN = 8
-CONCURRENT_REQUESTS_PER_IP = 8
+#CONCURRENT_REQUESTS_PER_DOMAIN = 16
+#CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
 # some sites detect spider by cookies
@@ -65,22 +65,25 @@ RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'ebook.middlewares.UserAgentMiddleware.RandomUserAgentMiddleware': 400,
+    'ebook.middlewares.ProxyMiddleware.RandomIpMiddleware': 100,
     # 'scrapy.downloadermiddlewares.retry.RetryMiddleware': 90,
-    # 'ebook.middlewares.ProxyMiddleware.RandomProxyMiddleware': 100,
     # 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
 }
 
-PROXY_LIST = os.path.dirname(__file__) + '/data/proxies.txt'
+# proxy ip list
+# PROXY_LIST = os.path.dirname(__file__) + '/data/proxies.txt'
 
 # Proxy mode
 # 0 = Every requests have different proxy
 # 1 = Take only one proxy from the list and assign it to every requests
 # 2 = Put a custom proxy to use in the settings
-PROXY_MODE = 0
+# PROXY_MODE = 0
 
 # If proxy mode is 2 uncomment this sentence :
 # Privoxy listening on 8118 port
-CUSTOM_PROXY = "http://127.0.0.1:8118"
+HTTP_PROXY = "http://127.0.0.1:8118"
+TOR_CONTROL_PORT = 9151
+TOR_PASSWORD = "123456"
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -112,11 +115,12 @@ USER_AGENT_LIST = os.path.dirname(__file__) + '/data/agents.txt'
 
 # Enable and configure HTTP caching (disabled by default)
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-#HTTPCACHE_ENABLED = True
-#HTTPCACHE_EXPIRATION_SECS = 0
-#HTTPCACHE_DIR = 'httpcache'
-#HTTPCACHE_IGNORE_HTTP_CODES = []
-#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+HTTPCACHE_ENABLED = True
+HTTPCACHE_EXPIRATION_SECS = 0 # seconds
+HTTPCACHE_DIR = '_httpcache'
+HTTPCACHE_IGNORE_HTTP_CODES = []
+HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+HTTPCACHE_POLICY = 'scrapy.extensions.httpcache.DummyPolicy'
 
 LOG_FILE = 'logs'
-LOG_LEVEL = 'ERROR'
+LOG_LEVEL = 'DEBUG'
