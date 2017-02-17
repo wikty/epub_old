@@ -35,19 +35,19 @@ class CTextBookSpider(scrapy.Spider):
 		# you may need the failure's type:
 
 		if failure.check(HttpError):
-		    # these exceptions come from HttpError spider middleware
-		    # you can get the non-200 response
-		    response = failure.value.response
-		    self.logger.error('HttpError on %s', response.url)
+			# these exceptions come from HttpError spider middleware
+			# you can get the non-200 response
+			response = failure.value.response
+			self.logger.error('HttpError on %s', response.url)
 
 		elif failure.check(DNSLookupError):
-		    # this is the original request
-		    request = failure.request
-		    self.logger.error('DNSLookupError on %s', request.url)
+			# this is the original request
+			request = failure.request
+			self.logger.error('DNSLookupError on %s', request.url)
 
 		elif failure.check(TimeoutError, TCPTimedOutError):
-		    request = failure.request
-		    self.logger.error('TimeoutError on %s', request.url)
+			request = failure.request
+			self.logger.error('TimeoutError on %s', request.url)
 		else:
 			self.logger.error('Unknow Error!')
 
@@ -88,7 +88,7 @@ class CTextBookSpider(scrapy.Spider):
 		booktree = bookinfo.copy()
 		booktree['chapters'] = [] # [{id, url, ch_name, en_name, articles},...]
 
-		xpath = '//div[@id="menu"]//a[@href="{url}"][contains(@class, "menuitem")]'.format(url=url)
+		xpath = '//div[@id="menu"]//a[@href="{url}"]'.format(url=url)
 		subcontents = response.xpath(xpath).xpath('following-sibling::span[1][contains(@class, "subcontents")]')
 		chapters = subcontents.xpath('span[contains(@class, "container")]') if subcontents else None
 		articles = subcontents.xpath('a[contains(@class, "menuitem")]') if subcontents else None

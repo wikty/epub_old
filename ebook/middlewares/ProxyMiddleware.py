@@ -32,4 +32,4 @@ class RandomIpMiddleware(object):
                 controller.signal(Signal.NEWNYM)
         
         # scrapy support http proxy
-        request.meta['proxy'] = self.http_proxy
+        #request.meta['proxy'] = self.http_proxy

@@ -1,11 +1,14 @@
 import re
+
 import scrapy
 from w3lib.html import remove_tags, remove_tags_with_content
+
 from ebook import items
 from ebook.item_loaders.ctext_article_loader import CTextArticleLoader
 
+
 class CTextSpider(scrapy.Spider):
-	name = 'ctext-spider'
+	name = 'ctext'
 	start_urls = ['http://ctext.org/zh']
 
 	def parse(self, response):
@@ -43,8 +46,8 @@ class CTextSpider(scrapy.Spider):
 	def parse_subcat(self, response):
 		en_subcat = response.url.split('/')[-2]
 
-		if en_subcat != 'confucianism':
-			return
+		# if en_subcat != 'confucianism':
+		# 	return
 
 		xpath = '//div[@id="menu"]//a[contains(@href, "%s")]/following-sibling::span[1]/a'
 		for book in response.xpath(xpath % en_subcat):
@@ -59,8 +62,8 @@ class CTextSpider(scrapy.Spider):
 	def parse_book(self, response):
 		en_book = response.url.split('/')[-2]
 
-		if en_book != 'liji':
-			return
+		# if en_book != 'liji':
+		# 	return
 		# if en_book not in ['analects', 'mengzi', 'liji', 'xunzi', 'xiao-jing', 'shuo-yuan', 'chun-qiu-fan-lu', 'han-shi-wai-zhuan']:
 		# 	return
 

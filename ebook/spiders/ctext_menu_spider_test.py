@@ -4,8 +4,8 @@ from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import DNSLookupError
 from twisted.internet.error import TimeoutError, TCPTimedOutError
 
-class CTextSpider(scrapy.Spider):
-	name = 'ctext-menu-spider-test'
+class CTextMenuSpiderTest(scrapy.Spider):
+	name = 'test-ctext-menu'
 	start_urls = ['http://ctext.org/zh']
 
 	def start_requests(self):
