@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 import os
-from epubMaker.utils import chapterid2filename, articleid2filename
+from .utils import chapterid2filename, articleid2filename
 
 class PageGenerator():
 
@@ -107,15 +107,15 @@ class PageGenerator():
                     l.append(li)
                     for article_id in chap_articles:
                         found = False
+                        artfile = articleid2filename(article_id, self.booktype)
                         for artid, arttitle in articles:
                             if artid == article_id:
-                                artfile = articleid2filename(artid, self.booktype)
-                                li = self.get_navpage_li(artfile, arttitle)
-                                l.append(li)
                                 found = True
                                 break
-                        # if not found:
-                        #     raise Exception('article %d not in chapter %s' % (article_id, chaptitle))
+                        if not found:
+                            arttitle = 'None'
+                        li = self.get_navpage_li(artfile, arttitle)
+                        l.append(li)
             else:
                 l = []
                 for artid, arttitle in articles:
@@ -147,11 +147,16 @@ class PageGenerator():
                     p = self.get_contentspage_p(1, chapfile, self.chapter_id_prefix, chapid, chaptitle)
                     l.append(p)
                     for article_id in chap_articles:
+                        artfile = articleid2filename(article_id, self.booktype)
+                        found = False
                         for artid, arttitle in articles:
                             if artid == article_id:
-                                artfile = articleid2filename(artid, self.booktype)
-                                p = self.get_contentspage_p(2, artfile, self.article_id_prefix, artid, arttitle)
-                                l.append(p)
+                                found = True        
+                                break
+                        if not found:
+                            arttitle = 'None'
+                        p = self.get_contentspage_p(2, artfile, self.article_id_prefix, article_id, arttitle)
+                        l.append(p)
             else:
                 l = []
                 for artid, arttitle in articles:

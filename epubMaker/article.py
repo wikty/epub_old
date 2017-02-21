@@ -4,6 +4,7 @@ import os
 class ArticleRaw(object):
 	def __init__(self, article):
 		if 'article_id' not in article:
+			print(article)
 			raise Exception('article raw lost article id')
 		self.id = int(article['article_id']) # required
 		self.book = article.get('book', '')

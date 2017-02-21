@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import random
 
+from stem import Signal
+from stem.control import Controller
+
 class RandomIpMiddleware(object):
     def __init__(self, http_proxy=None, tor_control_port=None, tor_password=None):
         if not http_proxy:

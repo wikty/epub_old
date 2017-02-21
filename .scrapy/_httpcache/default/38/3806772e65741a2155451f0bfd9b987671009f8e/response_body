@@ -1,5 +1,4 @@
-<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">
-User-agent: Slurp
+<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">User-agent: Slurp
 Disallow:
 Crawl-delay: 5
 
@@ -182,11 +181,10 @@ Disallow: /
 
 User-agent: msnbot
 Disallow: /admin
+Crawl-delay: 2
 
 User-agent: *
 Disallow: /admin
-
-Crawl-delay: 2
 
 Sitemap: http://ctext.org/siteindex.txt
 

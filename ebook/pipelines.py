@@ -89,6 +89,7 @@ class JsonWithEncodingPipeline(object):
 class StoreArticlesInBookPipeline(object):
 
     def __init__(self):
+        self.datadir = 'data'
         self.fd = {}
         self.fd['__books'] = codecs.open('books.jl', 'a+', encoding='utf-8')
         self.books = self.fd['__books']
@@ -98,7 +99,8 @@ class StoreArticlesInBookPipeline(object):
         if en_book is not None:
             line = json.dumps(dict(item), ensure_ascii=False) + "\n"
             if en_book not in self.fd:
-                self.fd[en_book] = codecs.open(en_book+'.jl', 'w', encoding='utf-8')
+                book_filename = os.sep.join([self.datadir, '%s.jl' % en_book])
+                self.fd[en_book] = codecs.open(book_filename, 'w', encoding='utf-8')
                 self.books.write(json.dumps({
                     'type': dict(item).get('book_type', ''),
                     'ch_name': dict(item).get('book', ''),

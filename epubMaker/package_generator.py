@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import os, time
 
-from epubMaker.utils import articleid2filename, chapterid2filename
+from .utils import articleid2filename, chapterid2filename
 
 class PackageGenerator():
     def __init__(self, targetdir, extra):

@@ -64,9 +64,11 @@ RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
-    # 'ebook.middlewares.UserAgentMiddleware.RandomUserAgentMiddleware': 400,
-    # 'ebook.middlewares.ProxyMiddleware.RandomIpMiddleware': 100,
-    # 'ebook.middlewares.JsMiddleware.DynamicPageProxyRequestMiddleware': 500,
+    'ebook.middlewares.UserAgentMiddleware.RandomUserAgentMiddleware': 400,
+    'ebook.middlewares.ProxyMiddleware.RandomIpMiddleware': 100,
+    'ebook.middlewares.JsMiddleware.DynamicPageProxyRequestMiddleware': 500,
+    
+    #'ebook.middlewares.JsMiddleware.PhantomjsRequestMiddleware': 500,
     
     # 'scrapy.downloadermiddlewares.retry.RetryMiddleware': 90,
     # 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,

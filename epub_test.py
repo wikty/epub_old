@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 import os, getopt, sys, json, subprocess
-from epubMaker.epub_generator import EpubGenerator
-from epubMaker.epub_config import EpubConfig
+from epubMaker import EpubGenerator
+from epubMaker import EpubConfig
 
 with open('books.jl', 'r', encoding='utf-8') as f:
 	for line in f:

@@ -1,35 +1,23 @@
 # -*- coding:utf-8 -*-
 import os, json, time
-from epubMaker.page_generator import PageGenerator
-from epubMaker.package_generator import PackageGenerator
-from epubMaker.epub_source import SourceSetup
-from epubMaker.chapter import ChapterRaw
-from epubMaker.article import ArticleRaw
-from epubMaker.template_manager import TplSimpleManager
+from .page_generator import PageGenerator
+from .package_generator import PackageGenerator
+from .epub_source import SourceSetup
+from .chapter import ChapterRaw
+from .article import ArticleRaw
+from .template_manager import TplSimpleManager
 
 class EpubGenerator:
 
     def __init__(self, config):
+        self.config = config
+
         # initial: make directories and copy files
         SourceSetup.run(
             config.get_target_epub_dirs(), 
             config.get_target_epub_files(), 
             config.get_source_epub_files()
         )
-
-        self.config = config
-        # standalone means that the book don't have chapters
-        self.isstandalone = config.is_standalone_book()
-        if not self.isstandalone:
-            self.chapterid_list = config.get_chapter_id()
-
-        # data source
-        self.jsonfile = config.get_source_data_filename('jsonfile')
-        self.metafile = config.get_source_data_filename('metafile')
-
-        # generated articles will be combined into epub file
-        self.articles = []
-        self.chapters = []
 
         # book basic information
         self.bookname = config.get_bookname()
@@ -65,12 +53,23 @@ class EpubGenerator:
         self.target_maincssfile = config.get_target_epub_filename('maincssfile', False)
         self.target_coverfile = config.get_target_epub_filename('coverfile', False)
 
-        # chapter&article id prefix in the contents
-        self.article_id_prefix = config.get_prefix_of_article_in_contents()
-        self.chapter_id_prefix = config.get_prefix_of_chapter_in_contents()
+        # chapter and article id prefix in the contents
+        self.article_id_prefix = config.get_prefix_of_article_id_in_contents()
+        self.chapter_id_prefix = config.get_prefix_of_chapter_id_in_contents()
+
+        # data source
+        self.jsonfile = config.get_source_data_filename()
+
+        # standalone means that the book don't have chapters
+        self.standalone = config.is_standalone_book()
+        self.chapter_id_list = [] if self.standalone else config.get_chapter_id_list()
+
+        # generated articles will be combined into epub file
+        self.articles = []
+        self.chapters = []
         
         # template directory
-        self.templatedir = config.get_templatedir()
+        self.templatedir = config.get_epub_templatedir()
         # template manager
         self.tplmanager = TplSimpleManager(self.templatedir)
 
@@ -135,9 +134,10 @@ class EpubGenerator:
         self.articles = sorted(self.articles, key=lambda article: article[0])
 
     def generate_chapters(self):
-        if self.isstandalone:
+        if self.standalone:
             return
-        for chapterid in self.chapterid_list:
+        
+        for chapterid in self.chapter_id_list:
             chapter = ChapterRaw(self.config.get_chapter(chapterid))
             self.generator.generate_chapter({
                 'id': chapter.get_id(),

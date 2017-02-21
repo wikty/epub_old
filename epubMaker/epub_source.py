@@ -4,7 +4,7 @@ class SourceSetup(object):
     @staticmethod
     def run(target_epub_dirs, target_epub_files, source_epub_files):
         # make epub resource directories
-        for _,dirname in target_epub_dirs.items():
+        for k,dirname in target_epub_dirs.items():
             try:
                 os.makedirs(dirname)
             except OSError as e:
